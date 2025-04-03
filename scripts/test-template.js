@@ -9,6 +9,9 @@ const fs = require("fs").promises;
 const path = require("path");
 const http = require("http");
 
+// Carrega variáveis de ambiente
+require("dotenv").config();
+
 // Verifica argumentos
 const templateId = process.argv[2];
 if (!templateId) {
@@ -20,6 +23,9 @@ if (!templateId) {
   listTemplates();
   process.exit(1);
 }
+
+// Define a porta do servidor
+const PORT = process.env.PORT || 4000;
 
 // Lista os templates disponíveis
 async function listTemplates() {
@@ -81,7 +87,7 @@ async function main() {
     // Prepara a requisição
     const options = {
       hostname: "localhost",
-      port: 3000,
+      port: PORT,
       path: "/api/images/generate",
       method: "POST",
       headers: {
@@ -107,7 +113,7 @@ async function main() {
         if (response.success) {
           console.log("\x1b[32mImagem gerada com sucesso!\x1b[0m");
           console.log(
-            `URL da imagem: http://localhost:3000${response.data.url}`
+            `URL da imagem: http://localhost:${PORT}${response.data.url}`
           );
           console.log(
             `Dimensões: ${response.data.dimensions.width}x${response.data.dimensions.height}`
@@ -128,7 +134,7 @@ async function main() {
     req.on("error", (error) => {
       console.error(`\x1b[31mErro na requisição: ${error.message}\x1b[0m`);
       console.log(
-        "Verifique se o servidor está rodando em: http://localhost:3000"
+        `Verifique se o servidor está rodando em: http://localhost:${PORT}`
       );
     });
 

@@ -1,0 +1,17 @@
+{
+  "templateId": "ia_news",
+  "data": {
+    "backgroundImage": "https://cdn.prod.website-files.com/65fb6889247a9db744e961de/65fb97b0ceac45fcfc9552d5_New-Project-20.webp",
+    "logoUrl": "https://triaddigital.com.br/wp-content/uploads/2025/02/logo_negativa.svg",
+    "headline": "GROK 3 LANÇADA POR ELON MUSK",
+    "description": "Elon Musk anunciou oficialmente sua nova IA, Grok 3, descrita como sendo 'a mais inteligente do mundo'. O sistema combina funções avançadas de processamento de linguagem natural e multiData para tentar superar concorrentes como GPT-4.",
+    "source": "GLOBO",
+    "currentSlide": "2",
+    "totalSlides": "5",
+    "accentColor": "#e91e63"
+  },
+  "options": {
+    "format": "png",
+    "quality": 90
+  }
+}
