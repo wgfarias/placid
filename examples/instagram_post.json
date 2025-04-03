@@ -1,0 +1,23 @@
+{
+  "templateId": "instagram",
+  "data": {
+    "backgroundImage": "https://images.unsplash.com/photo-1579546929518-9e396f3cc809?w=1080",
+    "overlayColor": "rgba(0, 0, 0, 0.5)",
+    "overlayOpacity": "0.7",
+    "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Logo_of_Company.svg/1200px-Logo_of_Company.svg.png",
+    "badgeText": "Nova Coleção",
+    "title": "Estilo & Elegância",
+    "subtitle": "Descubra as tendências da nova temporada",
+    "highlightText": "2025",
+    "accentColor": "#e74c3c",
+    "titleColor": "#ffffff",
+    "subtitleColor": "#f0f0f0",
+    "footerColor": "#e0e0e0",
+    "footerText": "Disponível em todas as lojas",
+    "socialHandle": "@sua.marca"
+  },
+  "options": {
+    "format": "png",
+    "quality": 90
+  }
+}

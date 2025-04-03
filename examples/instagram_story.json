@@ -1,0 +1,18 @@
+{
+  "templateId": "instagram_story",
+  "data": {
+    "backgroundImage": "https://images.unsplash.com/photo-1587614382346-4ec70e388b28?w=1080",
+    "backgroundBrightness": "0.7",
+    "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Logo_of_Company.svg/1200px-Logo_of_Company.svg.png",
+    "eyebrowText": "Evento Exclusivo",
+    "title": "Workshop de Fotografia",
+    "subtitle": "Aprenda técnicas avançadas com profissionais renomados",
+    "accentText": "Vagas Limitadas",
+    "accentColor": "#3498db",
+    "socialHandle": "@fotografiamaster"
+  },
+  "options": {
+    "format": "png",
+    "quality": 90
+  }
+}

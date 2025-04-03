@@ -1,0 +1,33 @@
+{
+  "name": "placid-api",
+  "version": "1.0.0",
+  "description": "API para geração de imagens baseadas em templates HTML",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "prod": "NODE_ENV=production node src/index.js",
+    "pm2:start": "pm2 start ecosystem.config.js",
+    "pm2:stop": "pm2 stop placid-api",
+    "pm2:restart": "pm2 restart placid-api",
+    "pm2:logs": "pm2 logs placid-api",
+    "pm2:status": "pm2 status",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test:template": "node scripts/test-template.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cheerio": "^1.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^5.1.0",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.2",
+    "puppeteer": "^24.5.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}

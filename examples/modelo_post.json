@@ -1,0 +1,30 @@
+{
+  "templateId": "modelo_post",
+  "data": {
+    "backgroundImage": "https://images.unsplash.com/photo-1496449903678-68ddcb189a24?w=1080",
+    "backgroundBrightness": "0.9",
+    "gradientDirection": "135deg",
+    "gradientColor1": "rgba(25, 44, 71, 0.7)",
+    "gradientColor2": "rgba(143, 45, 86, 0.6)",
+    "gradientOpacity": "0.85",
+    "patternUrl": "https://www.transparenttextures.com/patterns/cubes.png",
+    "patternSize": "300px",
+    "patternOpacity": "0.1",
+    "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Logo_of_Company.svg/1200px-Logo_of_Company.svg.png",
+    "category": "Marketing Digital",
+    "title": "Estratégias para Redes Sociais em 2025",
+    "subtitle": "Prepare sua marca para os novos algoritmos",
+    "infoTitle": "O que você vai aprender",
+    "infoContent": "Conheça as melhores práticas e ferramentas para destacar sua marca nas plataformas digitais e alcançar resultados impressionantes.",
+    "ctaText": "Saiba Mais",
+    "socialText": "@marketingpro",
+    "accentColor": "#9c27b0",
+    "titleColor": "#ffffff",
+    "subtitleColor": "#e0e0e0",
+    "textColor": "#ffffff"
+  },
+  "options": {
+    "format": "png",
+    "quality": 90
+  }
+}

@@ -1,0 +1,4 @@
+{
+  "name": "Template de Teste",
+  "content": "<!DOCTYPE html><html><head><title>Template Teste</title><style>body{width:1200px;height:630px;}</style></head><body><h1>{{titulo}}</h1><p>{{descricao}}</p></body></html>"
+}

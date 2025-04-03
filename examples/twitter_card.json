@@ -1,0 +1,20 @@
+{
+  "templateId": "twitter_card",
+  "data": {
+    "backgroundColor": "#ffffff",
+    "imageUrl": "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=600",
+    "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Logo_of_Company.svg/1200px-Logo_of_Company.svg.png",
+    "tagText": "Webinar Gratuito",
+    "headline": "Como construir uma presença digital autêntica",
+    "subheadline": "Aprenda estratégias eficientes para criar uma identidade única para sua marca nas redes sociais.",
+    "ctaText": "Inscreva-se Agora",
+    "websiteUrl": "www.seusite.com.br/webinar",
+    "accentColor": "#1da1f2",
+    "titleColor": "#14171a",
+    "subtitleColor": "#657786"
+  },
+  "options": {
+    "format": "png",
+    "quality": 90
+  }
+}
