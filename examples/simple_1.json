@@ -1,0 +1,15 @@
+{
+  "templateId": "simple_1",
+  "data": {
+    "backgroundImage": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1080&h=1350&fit=crop",
+    "logoUrl": "https://triaddigital.com.br/wp-content/uploads/2025/02/logo_negativa.svg",
+    "title": "Descubra Novos Horizontes",
+    "subtitle": "Uma jornada inesquecível te aguarda neste destino incrível",
+    "titleColor": "#ffffff",
+    "subtitleColor": "#f0f0f0"
+  },
+  "options": {
+    "format": "png",
+    "quality": 90
+  }
+}
