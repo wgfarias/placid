@@ -112,14 +112,29 @@ async function main() {
 
         if (response.success) {
           console.log("\x1b[32mImagem gerada com sucesso!\x1b[0m");
-          console.log(
-            `URL da imagem: http://localhost:${PORT}${response.data.url}`
-          );
+
+          // Verificar se URL já é absoluta (SNDT) ou relativa (local)
+          const imageUrl = response.data.url.startsWith("http")
+            ? response.data.url
+            : `http://localhost:${PORT}${response.data.url}`;
+
+          console.log(`URL da imagem: ${imageUrl}`);
           console.log(
             `Dimensões: ${response.data.dimensions.width}x${response.data.dimensions.height}`
           );
           console.log(`Formato: ${response.data.format}`);
           console.log(`Arquivo: ${response.data.fileName}`);
+
+          // Mostrar info de upload se disponível
+          if (response.data.uploaded_to_sndt) {
+            console.log(
+              `\x1b[32m✅ Upload para SNDT realizado com sucesso!\x1b[0m`
+            );
+          } else if (response.data.upload_error) {
+            console.log(
+              `\x1b[33m⚠️ Upload para SNDT falhou: ${response.data.upload_error}\x1b[0m`
+            );
+          }
         } else {
           console.error(
             `\x1b[31mErro ao gerar imagem: ${response.message}\x1b[0m`

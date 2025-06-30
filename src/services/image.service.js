@@ -3,6 +3,7 @@ const path = require("path");
 const puppeteer = require("puppeteer");
 const crypto = require("crypto");
 const cheerio = require("cheerio");
+const uploadService = require("./upload.service");
 
 // Importar configurações conforme o ambiente
 const config =
@@ -153,8 +154,8 @@ class ImageService {
       // Fechar o navegador
       await browser.close();
 
-      // Retornar informações da imagem gerada
-      return {
+      // Preparar resultado inicial
+      const result = {
         success: true,
         fileName,
         filePath: outputPath,
@@ -166,6 +167,39 @@ class ImageService {
         format: renderOptions.format,
         timestamp: new Date().toISOString(),
       };
+
+      // Upload para SNDT se habilitado
+      if (uploadService.isEnabled()) {
+        try {
+          console.log("🚀 Iniciando upload para SNDT...");
+          const uploadResult = await uploadService.uploadToSNDT(
+            outputPath,
+            fileName
+          );
+
+          // Substituir URL local pela URL do SNDT
+          result.url = uploadResult.url;
+          result.uploaded_to_sndt = true;
+          result.sndt_info = {
+            url: uploadResult.url,
+            size: uploadResult.size,
+            type: uploadResult.type,
+            uploaded_at: uploadResult.uploaded_at,
+          };
+
+          console.log(`✅ Upload para SNDT concluído: ${uploadResult.url}`);
+        } catch (uploadError) {
+          console.error("❌ Falha no upload para SNDT:", uploadError.message);
+          // Continua com URL local em caso de falha
+          result.uploaded_to_sndt = false;
+          result.upload_error = uploadError.message;
+        }
+      } else {
+        result.uploaded_to_sndt = false;
+        console.log("ℹ️ Upload para SNDT desabilitado");
+      }
+
+      return result;
     } catch (error) {
       console.error("Erro ao gerar imagem:", error);
       throw new Error(`Falha ao gerar imagem: ${error.message}`);
