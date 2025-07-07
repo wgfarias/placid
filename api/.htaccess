@@ -1,0 +1,19 @@
+# Versão simplificada para evitar conflitos
+<IfModule mod_security.c>
+    SecRuleEngine Off
+</IfModule>
+
+# Permitir uploads de imagens
+<Files "upload.php">
+    Order allow,deny
+    Allow from all
+</Files>
+
+# Headers básicos para CORS
+Header set Access-Control-Allow-Origin "*"
+Header set Access-Control-Allow-Methods "POST, GET, OPTIONS"
+Header set Access-Control-Allow-Headers "Authorization, Content-Type"
+
+# Configurações básicas de upload
+php_value upload_max_filesize 10M
+php_value post_max_size 10M 
