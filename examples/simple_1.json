@@ -6,7 +6,8 @@
     "title": "Descubra Novos Horizontes",
     "subtitle": "Uma jornada inesquecível te aguarda neste destino incrível",
     "titleColor": "#ffffff",
-    "subtitleColor": "#f0f0f0"
+    "subtitleColor": "#f0f0f0",
+    "titleFont": "Oswald"
   },
   "options": {
     "format": "png",
