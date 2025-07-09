@@ -58,19 +58,21 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        gap: 15px;
       }
 
       .logo {
-        width: 120px;
+        width: 180px;
         height: auto;
         margin-bottom: 40px;
         opacity: 0.95;
       }
 
       .title {
-        font-size: 90px;
-        font-weight: 800;
+        font-size: 100px;
+        font-weight: 600;
         line-height: 1.1;
+        letter-spacing: -3px;
         margin-bottom: 25px;
         color: var(--title-color);
         text-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
@@ -91,6 +93,17 @@
         word-break: break-word;
         max-width: 800px;
       }
+
+      .cta {
+        font-size: 28px;
+        font-weight: 600;
+        background-color: var(--accent-color);
+        border-radius: 90px;
+        padding: 20px 40px;
+        color: var(--title-color);
+        margin-top: 50px;
+        text-transform: uppercase;
+      }
     </style>
   </head>
   <body
@@ -98,6 +111,7 @@
       --title-color: #ffffff;
       --subtitle-color: #f0f0f0;
       --overlay-color: #253579;
+      --accent-color: #ff7700;
     "
   >
     <div
@@ -114,11 +128,15 @@
         src="https://triaddigital.com.br/wp-content/uploads/2025/02/logo_negativa.svg"
         alt="Triad Digital Logo"
       />
-      <h1 class="title">Inovação & Criatividade</h1>
+      <h1 class="title">
+        <b>Atendimento 24/7</b>: você acha que precisa de um?
+      </h1>
       <h2 class="subtitle">
-        Transforme suas ideias em realidade com soluções digitais que fazem a
-        diferença no mundo dos negócios
+        Transforme suas <b>ideias</b> em <b>realidade</b> com
+        <b>soluções digitais</b> que fazem a <b>diferença</b> no mundo dos
+        negócios
       </h2>
+      <div class="cta">Peça seu orçamento</div>
     </div>
   </body>
 </html>
