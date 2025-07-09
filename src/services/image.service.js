@@ -107,7 +107,8 @@ class ImageService {
 
       // Gerar nome de arquivo único
       const hash = crypto.randomBytes(16).toString("hex");
-      const fileName = `${hash}.${renderOptions.format}`;
+      const prefix = renderOptions.prefix || "";
+      const fileName = `${prefix}${hash}.${renderOptions.format}`;
       const outputPath = path.join(config.storage.imagesPath, fileName);
 
       // Iniciar o navegador com as configurações do ambiente

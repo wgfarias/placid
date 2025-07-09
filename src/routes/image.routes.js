@@ -6,6 +6,13 @@ const authMiddleware = require("../middlewares/auth.middleware");
 // Gerar uma imagem a partir de um template
 router.post("/generate", authMiddleware, imageController.generateImage);
 
+// Gerar múltiplas imagens em formato carrossel
+router.post(
+  "/generate-carousel",
+  authMiddleware,
+  imageController.generateCarousel
+);
+
 // Obter uma imagem pelo ID
 router.get("/:id", imageController.getImageById);
 

@@ -1,0 +1,89 @@
+{
+  "slides": [
+    {
+      "templateId": "simple_color",
+      "data": {
+        "title": "Bem-vindos ao Carrossel!",
+        "subtitle": "Apresentação inicial de nossa solução",
+        "ctaText": "Começar",
+        "titleColor": "#ffffff",
+        "subtitleColor": "#f0f0f0",
+        "accentColor": "#ff7700",
+        "titleFont": "Inter",
+        "titleTransform": "none",
+        "overlayColor": "#253579",
+        "backgroundImage": "https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1080&q=80",
+        "logoUrl": "https://triaddigital.com.br/wp-content/uploads/2025/02/logo_negativa.svg"
+      }
+    },
+    {
+      "templateId": "simple_color",
+      "data": {
+        "title": "Primeiro Slide",
+        "subtitle": "Detalhes sobre nosso primeiro ponto importante",
+        "ctaText": "Continuar",
+        "titleColor": "#ffffff",
+        "subtitleColor": "#f0f0f0",
+        "accentColor": "#e74c3c",
+        "titleFont": "Inter",
+        "titleTransform": "none",
+        "overlayColor": "#2c3e50",
+        "backgroundImage": "https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1080&q=80",
+        "logoUrl": "https://triaddigital.com.br/wp-content/uploads/2025/02/logo_negativa.svg"
+      }
+    },
+    {
+      "templateId": "simple_color",
+      "data": {
+        "title": "Segundo Slide",
+        "subtitle": "Mais informações sobre nossa abordagem",
+        "ctaText": "Próximo",
+        "titleColor": "#ffffff",
+        "subtitleColor": "#f0f0f0",
+        "accentColor": "#27ae60",
+        "titleFont": "Inter",
+        "titleTransform": "none",
+        "overlayColor": "#34495e",
+        "backgroundImage": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1080&q=80",
+        "logoUrl": "https://triaddigital.com.br/wp-content/uploads/2025/02/logo_negativa.svg"
+      }
+    },
+    {
+      "templateId": "simple_color",
+      "data": {
+        "title": "Terceiro Slide",
+        "subtitle": "Como implementamos nossa solução",
+        "ctaText": "Avançar",
+        "titleColor": "#ffffff",
+        "subtitleColor": "#f0f0f0",
+        "accentColor": "#3498db",
+        "titleFont": "Inter",
+        "titleTransform": "none",
+        "overlayColor": "#2980b9",
+        "backgroundImage": "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1080&q=80",
+        "logoUrl": "https://triaddigital.com.br/wp-content/uploads/2025/02/logo_negativa.svg"
+      }
+    },
+    {
+      "templateId": "simple_color",
+      "data": {
+        "title": "Finalizando",
+        "subtitle": "Obrigado pela atenção! Entre em contato conosco",
+        "ctaText": "Contato",
+        "titleColor": "#ffffff",
+        "subtitleColor": "#f0f0f0",
+        "accentColor": "#9b59b6",
+        "titleFont": "Inter",
+        "titleTransform": "none",
+        "overlayColor": "#8e44ad",
+        "backgroundImage": "https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1080&q=80",
+        "logoUrl": "https://triaddigital.com.br/wp-content/uploads/2025/02/logo_negativa.svg"
+      }
+    }
+  ],
+  "options": {
+    "format": "png",
+    "quality": 90,
+    "carouselId": "demo-carousel-2024"
+  }
+}
