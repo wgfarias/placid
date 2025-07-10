@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3 Things - Slide 2 (Conteúdo)</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Poppins:wght@400;600;700;800&family=Montserrat:wght@400;600;700;800&display=swap");
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        width: 1080px;
+        height: 1350px;
+        overflow: hidden;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        font-family: "Inter", sans-serif;
+        position: relative;
+      }
+
+      .container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        position: relative;
+      }
+
+      .content-area {
+        flex: 1;
+        padding: 100px 80px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        z-index: 2;
+        background: linear-gradient(
+          135deg,
+          rgba(255, 255, 255, 0.95) 0%,
+          rgba(255, 255, 255, 0.9) 100%
+        );
+        margin-right: 300px;
+        position: relative;
+      }
+
+      .logo {
+        width: 120px;
+        height: auto;
+        margin-bottom: 60px;
+        opacity: 0.8;
+      }
+
+      .title {
+        font-size: clamp(40px, 6vw, 80px);
+        font-weight: 800;
+        line-height: 1.1;
+        letter-spacing: -2px;
+        margin-bottom: 40px;
+        color: var(--title-color);
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        word-break: break-word;
+        font-family: var(--title-font), sans-serif;
+        text-transform: var(--title-transform);
+      }
+
+      .text {
+        font-size: clamp(18px, 3vw, 32px);
+        font-weight: 400;
+        line-height: 1.6;
+        color: var(--text-color);
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        word-break: break-word;
+        margin-bottom: 40px;
+      }
+
+      .sidebar {
+        position: absolute;
+        top: 80px;
+        right: 60px;
+        width: 280px;
+        height: 1190px;
+        border-radius: 30px;
+        overflow: hidden;
+        z-index: 1;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+      }
+
+      .sidebar-background {
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: left center;
+        background-image: url("{{sidebarImage}}");
+        filter: brightness(1.1) contrast(1.1);
+      }
+
+      .slide-number {
+        position: absolute;
+        bottom: 40px;
+        left: 60px;
+        background: rgba(0, 0, 0, 0.7);
+        backdrop-filter: blur(10px);
+        padding: 12px 20px;
+        border-radius: 50px;
+        color: #ffffff;
+        font-size: 18px;
+        font-weight: 600;
+        z-index: 3;
+      }
+
+      .accent-line {
+        width: 80px;
+        height: 6px;
+        background: var(--accent-color);
+        margin-bottom: 30px;
+        border-radius: 3px;
+      }
+    </style>
+  </head>
+  <body
+    style="
+      --title-color: {{titleColor}};
+      --text-color: {{textColor}};
+      --accent-color: {{accentColor}};
+      --title-font: {{titleFont}};
+      --title-transform: {{titleTransform}};
+    "
+  >
+    <div class="container">
+      <div class="content-area">
+        <img class="logo" src="{{logo}}" alt="Logo" />
+        <div class="accent-line"></div>
+        <h1 class="title">{{title}}</h1>
+        <p class="text">{{text}}</p>
+        <p class="text">{{text2}}</p>
+      </div>
+
+      <div class="sidebar">
+        <div class="sidebar-background"></div>
+      </div>
+    </div>
+
+    <div class="slide-number">02/05</div>
+  </body>
+</html>
