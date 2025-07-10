@@ -32,7 +32,7 @@
         height: 100%;
         background: linear-gradient(
           180deg,
-          rgba(0, 0, 0, 0.4) 0%,
+          rgba(0, 0, 0, 0.3) 0%,
           rgba(0, 0, 0, 0.7) 100%
         );
         z-index: 1;
@@ -48,7 +48,7 @@
         justify-content: center;
         align-items: center;
         text-align: center;
-        padding: 80px 60px;
+        padding: 90px 60px;
       }
 
       .logo {
@@ -87,17 +87,13 @@
       }
 
       .slide-number {
-        position: absolute;
-        bottom: 40px;
-        right: 60px;
-        background: rgba(255, 255, 255, 0.9);
+        background: var(--accent-color);
         backdrop-filter: blur(10px);
         padding: 12px 20px;
         border-radius: 50px;
-        color: #2d3748;
+        color: var(--title-color);
         font-size: 18px;
         font-weight: 600;
-        z-index: 3;
       }
 
       .accent-dot {
@@ -126,7 +122,7 @@
       <div class="accent-dot"></div>
       <h1 class="title">{{title}}</h1>
       <p class="subtitle">{{subtitle}}</p>
+      <div class="slide-number">CONTINUE LENDO...</div>
     </div>
-    <div class="slide-number">01/05</div>
   </body>
 </html>
