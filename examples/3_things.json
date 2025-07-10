@@ -11,10 +11,8 @@
         "subtitleColor": "#e2e8f0",
         "titleTransform": "none",
         "backgroundImage": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1080&q=80",
-        "gradientColor1": "#667eea",
-        "gradientColor2": "#764ba2",
-        "gradientColor1Alpha": "rgba(102, 126, 234, 0.6)",
-        "gradientColor2Alpha": "rgba(118, 75, 162, 0.6)"
+        "gradientColor1": "#667eea8b",
+        "gradientColor2": "#764ba28b"
       },
       "templateId": "3_things_slide_1"
     },
@@ -73,10 +71,8 @@
         "subtitleColor": "#e2e8f0",
         "titleTransform": "none",
         "backgroundImage": "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1080&q=80",
-        "gradientColor1": "#667eea",
-        "gradientColor2": "#764ba2",
-        "gradientColor1Alpha": "rgba(102, 126, 234, 0.6)",
-        "gradientColor2Alpha": "rgba(118, 75, 162, 0.6)"
+        "gradientColor1": "#667eea8b",
+        "gradientColor2": "#764ba28b"
       },
       "templateId": "3_things_slide_5"
     }

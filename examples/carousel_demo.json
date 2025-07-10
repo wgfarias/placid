@@ -14,9 +14,7 @@
         "titleTransform": "{{titleTransform}}",
         "backgroundImage": "{{backgroundImage}}",
         "gradientColor1": "{{gradientColor1}}",
-        "gradientColor2": "{{gradientColor2}}",
-        "gradientColor1Alpha": "{{gradientColor1Alpha}}",
-        "gradientColor2Alpha": "{{gradientColor2Alpha}}"
+        "gradientColor2": "{{gradientColor2}}"
       }
     },
     {
@@ -76,9 +74,7 @@
         "titleTransform": "{{titleTransform}}",
         "backgroundImage": "{{backgroundImage}}",
         "gradientColor1": "{{gradientColor1}}",
-        "gradientColor2": "{{gradientColor2}}",
-        "gradientColor1Alpha": "{{gradientColor1Alpha}}",
-        "gradientColor2Alpha": "{{gradientColor2Alpha}}"
+        "gradientColor2": "{{gradientColor2}}"
       }
     }
   ],
