@@ -34,7 +34,7 @@
         background: linear-gradient(
           180deg,
           rgba(0, 0, 0, 0.3) 0%,
-          rgba(0, 0, 0, 0.8) 100%
+          rgba(0, 0, 0, 0.7) 100%
         );
         z-index: 1;
       }
@@ -49,7 +49,7 @@
         justify-content: center;
         align-items: center;
         text-align: center;
-        padding: 80px 60px;
+        padding: 90px 60px;
       }
 
       .logo {
@@ -108,18 +108,13 @@
       }
 
       .slide-number {
-        position: absolute;
-        bottom: 40px;
-        left: 50%;
-        transform: translateX(-50%);
-        background: rgba(255, 255, 255, 0.9);
+        background: var(--cta-color);
         backdrop-filter: blur(10px);
         padding: 12px 20px;
         border-radius: 50px;
-        color: #2d3748;
+        color: var(--title-color);
         font-size: 18px;
         font-weight: 600;
-        z-index: 3;
       }
 
       .accent-line {
@@ -148,8 +143,7 @@
       <h1 class="title">{{title}}</h1>
       <p class="subtitle">{{subtitle}}</p>
       <a href="#" class="cta-button">{{ctaText}}</a>
+      <div class="slide-number">05/05</div>
     </div>
-
-    <div class="slide-number">05/05</div>
   </body>
 </html>
