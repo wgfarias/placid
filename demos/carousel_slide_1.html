@@ -119,12 +119,18 @@
       --title-font: Inter;
       --title-transform: none;
       --accent-color: #db0049;
+      --gradient-color-1: #667eea;
+      --gradient-color-2: #764ba2;
     "
   >
     <div
       class="background"
       style="
-        background-image: url('https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1080&q=80');
+        background: linear-gradient(
+          135deg,
+          var(--gradient-color-1) 0%,
+          var(--gradient-color-2) 100%
+        );
       "
     ></div>
     <div class="overlay"></div>

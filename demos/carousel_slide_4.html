@@ -17,7 +17,11 @@
         width: 1080px;
         height: 1350px;
         overflow: hidden;
-        background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        background: linear-gradient(
+          135deg,
+          var(--gradient-color-1) 0%,
+          var(--gradient-color-2) 100%
+        );
         font-family: "Inter", sans-serif;
         position: relative;
       }
@@ -85,18 +89,13 @@
       }
 
       .slide-number {
-        position: absolute;
-        bottom: 40px;
-        left: 50%;
-        transform: translateX(-50%);
-        background: rgba(0, 0, 0, 0.7);
+        background: var(--accent-color);
         backdrop-filter: blur(10px);
         padding: 12px 20px;
         border-radius: 50px;
-        color: #ffffff;
+        color: var(--title-color);
         font-size: 18px;
         font-weight: 600;
-        z-index: 3;
       }
 
       .accent-line {
@@ -116,6 +115,8 @@
       --accent-color: #f5576c;
       --title-font: Inter;
       --title-transform: none;
+      --gradient-color-1: #f093fb;
+      --gradient-color-2: #f5576c;
     "
   >
     <div class="container">
@@ -126,15 +127,14 @@
           alt="Logo"
         />
         <div class="accent-line"></div>
-        <h1 class="title">Seu Conteúdo Aqui</h1>
+        <h1 class="title">3. Automatize sua Gestão</h1>
         <p class="text">
-          Este é um slide genérico que pode ser personalizado com qualquer
-          conteúdo. Perfeito para apresentar informações importantes, destaques
-          ou qualquer mensagem que você queira transmitir para seu público.
+          Integre todos os seus sistemas e processos em uma única plataforma.
+          Desde controle financeiro até gestão de estoque, tudo pode ser
+          automatizado para economizar tempo e reduzir erros.
         </p>
+        <div class="slide-number">04/05</div>
       </div>
     </div>
-
-    <div class="slide-number">04/05</div>
   </body>
 </html>

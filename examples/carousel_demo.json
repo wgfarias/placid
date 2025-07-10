@@ -6,13 +6,14 @@
       "data": {
         "title": "{{title}}",
         "subtitle": "{{subtitle}}",
-        "backgroundImage": "{{backgroundImage}}",
         "logo": "{{logo}}",
         "titleColor": "{{titleColor}}",
         "subtitleColor": "{{subtitleColor}}",
         "accentColor": "{{accentColor}}",
         "titleFont": "{{titleFont}}",
-        "titleTransform": "{{titleTransform}}"
+        "titleTransform": "{{titleTransform}}",
+        "gradientColor1": "{{gradientColor1}}",
+        "gradientColor2": "{{gradientColor2}}"
       }
     },
     {
@@ -53,7 +54,9 @@
         "textColor": "{{textColor}}",
         "accentColor": "{{accentColor}}",
         "titleFont": "{{titleFont}}",
-        "titleTransform": "{{titleTransform}}"
+        "titleTransform": "{{titleTransform}}",
+        "gradientColor1": "{{gradientColor1}}",
+        "gradientColor2": "{{gradientColor2}}"
       }
     },
     {
@@ -63,12 +66,13 @@
         "subtitle": "{{subtitle}}",
         "ctaText": "{{ctaText}}",
         "ctaColor": "{{ctaColor}}",
-        "backgroundImage": "{{backgroundImage}}",
         "logo": "{{logo}}",
         "titleColor": "{{titleColor}}",
         "subtitleColor": "{{subtitleColor}}",
         "titleFont": "{{titleFont}}",
-        "titleTransform": "{{titleTransform}}"
+        "titleTransform": "{{titleTransform}}",
+        "gradientColor1": "{{gradientColor1}}",
+        "gradientColor2": "{{gradientColor2}}"
       }
     }
   ],
