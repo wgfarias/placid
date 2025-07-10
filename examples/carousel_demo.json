@@ -12,8 +12,11 @@
         "accentColor": "{{accentColor}}",
         "titleFont": "{{titleFont}}",
         "titleTransform": "{{titleTransform}}",
+        "backgroundImage": "{{backgroundImage}}",
         "gradientColor1": "{{gradientColor1}}",
-        "gradientColor2": "{{gradientColor2}}"
+        "gradientColor2": "{{gradientColor2}}",
+        "gradientColor1Alpha": "{{gradientColor1Alpha}}",
+        "gradientColor2Alpha": "{{gradientColor2Alpha}}"
       }
     },
     {
@@ -71,8 +74,11 @@
         "subtitleColor": "{{subtitleColor}}",
         "titleFont": "{{titleFont}}",
         "titleTransform": "{{titleTransform}}",
+        "backgroundImage": "{{backgroundImage}}",
         "gradientColor1": "{{gradientColor1}}",
-        "gradientColor2": "{{gradientColor2}}"
+        "gradientColor2": "{{gradientColor2}}",
+        "gradientColor1Alpha": "{{gradientColor1Alpha}}",
+        "gradientColor2Alpha": "{{gradientColor2Alpha}}"
       }
     }
   ],
