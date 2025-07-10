@@ -1,0 +1,81 @@
+{
+  "carouselId": "demo-carousel-2024",
+  "slides": [
+    {
+      "templateId": "3_things_slide_1",
+      "data": {
+        "title": "{{title}}",
+        "subtitle": "{{subtitle}}",
+        "backgroundImage": "{{backgroundImage}}",
+        "logo": "{{logo}}",
+        "titleColor": "{{titleColor}}",
+        "subtitleColor": "{{subtitleColor}}",
+        "accentColor": "{{accentColor}}",
+        "titleFont": "{{titleFont}}",
+        "titleTransform": "{{titleTransform}}"
+      }
+    },
+    {
+      "templateId": "3_things_slide_2",
+      "data": {
+        "title": "{{title}}",
+        "text": "{{text}}",
+        "sidebarImage": "{{sidebarImage}}",
+        "logo": "{{logo}}",
+        "titleColor": "{{titleColor}}",
+        "textColor": "{{textColor}}",
+        "accentColor": "{{accentColor}}",
+        "titleFont": "{{titleFont}}",
+        "titleTransform": "{{titleTransform}}"
+      }
+    },
+    {
+      "templateId": "3_things_slide_3",
+      "data": {
+        "title": "{{title}}",
+        "text": "{{text}}",
+        "sidebarImage": "{{sidebarImage}}",
+        "logo": "{{logo}}",
+        "titleColor": "{{titleColor}}",
+        "textColor": "{{textColor}}",
+        "accentColor": "{{accentColor}}",
+        "titleFont": "{{titleFont}}",
+        "titleTransform": "{{titleTransform}}"
+      }
+    },
+    {
+      "templateId": "3_things_slide_4",
+      "data": {
+        "title": "{{title}}",
+        "text": "{{text}}",
+        "logo": "{{logo}}",
+        "titleColor": "{{titleColor}}",
+        "textColor": "{{textColor}}",
+        "accentColor": "{{accentColor}}",
+        "titleFont": "{{titleFont}}",
+        "titleTransform": "{{titleTransform}}"
+      }
+    },
+    {
+      "templateId": "3_things_slide_5",
+      "data": {
+        "title": "{{title}}",
+        "subtitle": "{{subtitle}}",
+        "ctaText": "{{ctaText}}",
+        "ctaColor": "{{ctaColor}}",
+        "backgroundImage": "{{backgroundImage}}",
+        "logo": "{{logo}}",
+        "titleColor": "{{titleColor}}",
+        "subtitleColor": "{{subtitleColor}}",
+        "titleFont": "{{titleFont}}",
+        "titleTransform": "{{titleTransform}}"
+      }
+    }
+  ],
+  "options": {
+    "quality": 95,
+    "format": "png",
+    "sendToSNDT": true
+  },
+  "templateId": "3_things"
+}

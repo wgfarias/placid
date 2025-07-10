@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>3 Things - Slide 3 (Conteúdo)</title>
+    <title>Carrossel - Slide 3 (Conteúdo)</title>
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Poppins:wght@400;600;700;800&family=Montserrat:wght@400;600;700;800&display=swap");
 
@@ -17,7 +17,7 @@
         width: 1080px;
         height: 1350px;
         overflow: hidden;
-        background: linear-gradient(225deg, #667eea 0%, #764ba2 100%);
+        background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
         font-family: "Inter", sans-serif;
         position: relative;
       }
@@ -51,7 +51,7 @@
         height: auto;
         margin-bottom: 60px;
         opacity: 0.8;
-        margin-left: auto;
+        align-self: flex-end;
       }
 
       .title {
@@ -96,7 +96,6 @@
         height: 100%;
         background-size: cover;
         background-position: right center;
-        background-image: url("{{sidebarImage}}");
         filter: brightness(1.2) contrast(1.05) hue-rotate(10deg);
       }
 
@@ -120,29 +119,43 @@
         background: var(--accent-color);
         margin-bottom: 30px;
         border-radius: 3px;
-        margin-left: auto;
+        align-self: flex-end;
       }
     </style>
   </head>
   <body
     style="
-      --title-color: {{titleColor}};
-      --text-color: {{textColor}};
-      --accent-color: {{accentColor}};
-      --title-font: {{titleFont}};
-      --title-transform: {{titleTransform}};
+      --title-color: #2d3748;
+      --text-color: #4a5568;
+      --accent-color: #764ba2;
+      --title-font: Inter;
+      --title-transform: none;
     "
   >
     <div class="container">
-      <div class="content-area">
-        <img class="logo" src="{{logo}}" alt="Logo" />
-        <div class="accent-line"></div>
-        <h1 class="title">{{title}}</h1>
-        <p class="text">{{text}}</p>
+      <div class="sidebar">
+        <div
+          class="sidebar-background"
+          style="
+            background-image: url('https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1080&q=80');
+          "
+        ></div>
       </div>
 
-      <div class="sidebar">
-        <div class="sidebar-background"></div>
+      <div class="content-area">
+        <img
+          class="logo"
+          src="https://triaddigital.com.br/wp-content/uploads/2025/02/logo_negativa.svg"
+          alt="Logo"
+        />
+        <div class="accent-line"></div>
+        <h1 class="title">2. Otimize seu Atendimento</h1>
+        <p class="text">
+          Crie sistemas de suporte automatizados que respondem instantaneamente
+          às dúvidas mais comuns dos seus clientes. Integre WhatsApp Business,
+          chatbots inteligentes e sistemas de tickets para um atendimento
+          eficiente e escalável.
+        </p>
       </div>
     </div>
 

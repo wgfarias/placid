@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Demo Carrossel Completo - 5 Slides</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 20px;
+        background-color: #f0f0f0;
+        font-family: Arial, sans-serif;
+      }
+
+      .demo-container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .demo-header {
+        text-align: center;
+        margin-bottom: 40px;
+      }
+
+      .demo-title {
+        font-size: 48px;
+        font-weight: 800;
+        color: #2d3748;
+        margin-bottom: 10px;
+      }
+
+      .demo-subtitle {
+        font-size: 24px;
+        color: #4a5568;
+        margin-bottom: 20px;
+      }
+
+      .demo-description {
+        font-size: 18px;
+        color: #718096;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .slide-container {
+        display: flex;
+        gap: 20px;
+        overflow-x: auto;
+        padding: 20px 0;
+        scroll-snap-type: x mandatory;
+      }
+
+      .slide-frame {
+        flex: 0 0 auto;
+        width: 324px; /* 1080px / 3.33 para manter proporção */
+        height: 405px; /* 1350px / 3.33 para manter proporção */
+        border: 3px solid #e2e8f0;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        scroll-snap-align: start;
+        position: relative;
+      }
+
+      .slide-frame iframe {
+        width: 1080px;
+        height: 1350px;
+        border: none;
+        transform: scale(0.3);
+        transform-origin: top left;
+        pointer-events: none;
+      }
+
+      .slide-label {
+        position: absolute;
+        bottom: -35px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #2d3748;
+        color: white;
+        padding: 8px 16px;
+        border-radius: 20px;
+        font-size: 14px;
+        font-weight: 600;
+        white-space: nowrap;
+      }
+
+      .instructions {
+        margin-top: 60px;
+        padding: 30px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        border-radius: 20px;
+        color: white;
+        text-align: center;
+      }
+
+      .instructions h3 {
+        font-size: 28px;
+        margin-bottom: 20px;
+      }
+
+      .instructions p {
+        font-size: 18px;
+        line-height: 1.6;
+        margin-bottom: 15px;
+      }
+
+      .tech-specs {
+        margin-top: 40px;
+        padding: 30px;
+        background: white;
+        border-radius: 20px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+      }
+
+      .tech-specs h3 {
+        font-size: 28px;
+        color: #2d3748;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+
+      .specs-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        margin-top: 20px;
+      }
+
+      .spec-item {
+        padding: 20px;
+        background: #f7fafc;
+        border-radius: 10px;
+        border-left: 4px solid #667eea;
+      }
+
+      .spec-item h4 {
+        font-size: 18px;
+        color: #2d3748;
+        margin-bottom: 10px;
+      }
+
+      .spec-item p {
+        color: #4a5568;
+        line-height: 1.5;
+      }
+
+      .highlight-box {
+        background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        color: white;
+        padding: 20px;
+        border-radius: 15px;
+        margin: 20px 0;
+        text-align: center;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      .highlight-box h4 {
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="demo-container">
+      <div class="demo-header">
+        <h1 class="demo-title">Template 3 Things</h1>
+        <h2 class="demo-subtitle">
+          Carrossel de 5 Slides Otimizado para Automação
+        </h2>
+        <p class="demo-description">
+          Template completo do carrossel "3 Things" com 5 slides otimizados para
+          automação. Cada slide tem um único campo de texto nos slides 2 e 3, e
+          o slide final limpo sem informações de contato.
+          <strong>Perfeitamente compatível com N8N</strong>
+          e outros sistemas de automação. Ideal para apresentações
+          automatizadas, campanhas de marketing e conteúdo para redes sociais.
+        </p>
+      </div>
+
+      <div class="slide-container">
+        <div class="slide-frame">
+          <iframe src="carousel_slide_1.html"></iframe>
+          <div class="slide-label">Slide 1 - Capa</div>
+        </div>
+
+        <div class="slide-frame">
+          <iframe src="carousel_slide_2.html"></iframe>
+          <div class="slide-label">Slide 2 - Conteúdo</div>
+        </div>
+
+        <div class="slide-frame">
+          <iframe src="carousel_slide_3.html"></iframe>
+          <div class="slide-label">Slide 3 - Conteúdo</div>
+        </div>
+
+        <div class="slide-frame">
+          <iframe src="carousel_slide_4.html"></iframe>
+          <div class="slide-label">Slide 4 - Conteúdo</div>
+        </div>
+
+        <div class="slide-frame">
+          <iframe src="carousel_slide_5.html"></iframe>
+          <div class="slide-label">Slide 5 - Fechamento</div>
+        </div>
+      </div>
+
+      <div class="instructions">
+        <h3>🎯 Como Usar</h3>
+        <p>
+          Cada slide foi projetado para ser completamente personalizável através
+          da nossa API de carrossel.
+        </p>
+        <p>
+          Use diferentes templates para cada slide em uma única requisição,
+          criando apresentações dinâmicas e envolventes.
+        </p>
+        <p>Dimensões: 1080x1350px (formato Instagram Story/Reels)</p>
+        <p>
+          <strong>✨ Novo:</strong> Texto responsivo com clamp() que se ajusta
+          automaticamente ao tamanho da tela!
+        </p>
+      </div>
+
+      <div class="highlight-box">
+        <h4>📝 Texto de Demonstração Atualizado</h4>
+        <p>
+          O slide 1 agora usa o título:
+          <strong>"3 dicas para usar automação no seu negócio agora!"</strong>
+        </p>
+        <p>
+          Este texto maior demonstra perfeitamente como o clamp() ajusta
+          automaticamente o tamanho em diferentes telas.
+        </p>
+      </div>
+
+      <div class="highlight-box">
+        <h4>🎨 Melhorias Visuais Recentes</h4>
+        <p>
+          <strong>✨ Espaçamento Aprimorado:</strong> Slides 2 e 3 agora têm
+          mais respiro (padding aumentado de 80px 60px para 100px 80px)
+        </p>
+        <p>
+          <strong>🔄 Continuidade Visual:</strong> As imagens dos slides 2 e 3
+          criam um efeito de sequência através de posicionamento estratégico
+        </p>
+      </div>
+
+      <div class="tech-specs">
+        <h3>🔧 Especificações Técnicas</h3>
+        <div class="specs-grid">
+          <div class="spec-item">
+            <h4>Slide 1 - Capa</h4>
+            <p>
+              Título principal, subtítulo, logo, imagem de fundo com overlay
+              escuro. Perfeito para abertura e branding.
+            </p>
+            <p>
+              <strong>✨ Novo:</strong> Texto responsivo com clamp() - ajusta
+              automaticamente entre 60px e 120px!
+            </p>
+          </div>
+          <div class="spec-item">
+            <h4>Slide 2 - Conteúdo</h4>
+            <p>
+              Layout com sidebar direita para imagem, área de conteúdo principal
+              com título e texto. Ideal para apresentar informações.
+            </p>
+            <p>
+              <strong>✨ Novo:</strong> Espaçamento aprimorado e imagem
+              posicionada à esquerda para continuidade visual!
+            </p>
+          </div>
+          <div class="spec-item">
+            <h4>Slide 3 - Conteúdo</h4>
+            <p>
+              Similar ao slide 2, mas com sidebar esquerda e alinhamento à
+              direita. Variação para quebrar monotonia visual.
+            </p>
+            <p>
+              <strong>✨ Novo:</strong> Imagem posicionada à direita, criando
+              sequência visual com o slide 2!
+            </p>
+          </div>
+          <div class="spec-item">
+            <h4>Slide 4 - Conteúdo Genérico</h4>
+            <p>
+              Layout centralizado com slide genérico para qualquer conteúdo.
+              Ideal para mensagens importantes e destaques com design clean.
+            </p>
+          </div>
+          <div class="spec-item">
+            <h4>Slide 5 - Fechamento</h4>
+            <p>
+              Call-to-action, informações de contato e QR code. Perfeito para
+              converter leads e gerar ações.
+            </p>
+          </div>
+          <div class="spec-item">
+            <h4>💡 Texto Responsivo</h4>
+            <p>
+              Todos os slides agora usam clamp() para texto responsivo
+              automático. Sem JavaScript, sem quebras de layout - o texto se
+              adapta perfeitamente a qualquer tamanho de tela entre os valores
+              mínimo e máximo definidos.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="instructions">
+        <h3>🔬 Teste Interativo</h3>
+        <p>
+          Quer ver o clamp() em ação? Abra o arquivo
+          <strong>carousel_test_responsive.html</strong>
+          para um teste interativo onde você pode redimensionar elementos e ver
+          o texto se ajustando em tempo real!
+        </p>
+        <p>
+          <strong>Arquivo de teste:</strong>
+          <code>demos/carousel_test_responsive.html</code>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
