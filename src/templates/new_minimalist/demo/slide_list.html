@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Minimalist - Slide List</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+      :root {
+        --cor-primaria: #78909c; /* Cor dos marcadores */
+        --cor-secundaria: #1a1a1a;
+        --fonte: 'Inter', sans-serif;
+        --cor-texto-primario: #ffffff;
+        --cor-fundo: #333333;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        width: 1080px;
+        height: 1350px;
+        overflow: hidden;
+        background-color: var(--cor-fundo);
+        font-family: var(--fonte, "Inter");
+        color: var(--cor-texto-primario);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 120px 80px;
+        position: relative;
+      }
+
+      .content-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .logo {
+        height: 50px;
+        width: auto;
+        margin-bottom: 60px;
+      }
+
+      .title {
+        font-size: 80px;
+        font-weight: 600;
+        line-height: 1.1;
+        letter-spacing: -0.03em;
+        margin-bottom: 60px;
+        color: var(--cor-texto-primario);
+      }
+
+      .list-container {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        font-size: 40px;
+        margin-bottom: 60px;
+      }
+
+      ul, ol {
+        list-style: none;
+      }
+
+      li {
+        display: flex;
+        align-items: center;
+        margin-bottom: 25px;
+      }
+
+      .list-number {
+        background-color: var(--cor-primaria, #78909c);
+        color: white;
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        font-size: 35px;
+        border-radius: 8px;
+        margin-right: 25px;
+        flex-shrink: 0;
+      }
+
+      .list-text {
+        font-weight: 400;
+      }
+
+      .alert-icon {
+        width: 150px;
+        height: 150px;
+        object-fit: contain;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content-wrapper">
+      <img class="logo" src="https://placehold.co/200x100/transparent/white?text=LOGO" alt="Logo" />
+
+      <h1 class="title">Os vilões do desperdício:</h1>
+
+      <!-- Items da lista devem ser montados no backend ou frontend antes de enviar -->
+      <div class="list-container">
+        <ul>
+          <li><span class="list-number">1</span><span class="list-text">Compras excessivas</span></li>
+          <li><span class="list-number">2</span><span class="list-text">Armazenamento errado</span></li>
+          <li><span class="list-number">3</span><span class="list-text">Cortes mal feitos</span></li>
+          <li><span class="list-number">4</span><span class="list-text">Porções grandes demais</span></li>
+          <li><span class="list-number">5</span><span class="list-text">Equipe sem treinamento</span></li>
+        </ul>
+      </div>
+
+      <img class="alert-icon" src="https://placehold.co/150x150/e65100/white?text=!" alt="Alert" />
+    </div>
+  </body>
+</html>
+

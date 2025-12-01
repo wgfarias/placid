@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Minimalist - Slide Highlight</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+      :root {
+        --cor-primaria: {{cor_primaria}}; /* Background */
+        --fonte: {{fonte}}, sans-serif;
+        --cor-texto-primario: #ffffff;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        width: 1080px;
+        height: 1350px;
+        overflow: hidden;
+        background-color: var(--cor-primaria, #e65100);
+        font-family: var(--fonte, "Inter");
+        color: var(--cor-texto-primario);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 120px 80px;
+        position: relative;
+        text-align: center;
+      }
+
+      .logo {
+        position: absolute;
+        top: 60px;
+        left: 60px;
+        height: 50px;
+        width: auto;
+        opacity: 0.9;
+      }
+
+      .top-text {
+        font-size: 50px;
+        font-weight: 500;
+        line-height: 1.2;
+        margin-bottom: 40px;
+        opacity: 0.9;
+      }
+
+      .highlight-text {
+        font-size: 90px;
+        font-weight: 800;
+        line-height: 1.1;
+        letter-spacing: -0.03em;
+        max-width: 90%;
+        margin-bottom: 60px;
+      }
+      
+      .footer-text {
+        font-size: 40px;
+        font-weight: 500;
+        opacity: 0.9;
+        max-width: 80%;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <img class="logo" src="{{logoUrl}}" alt="Logo" /> -->
+
+    <div class="top-text">
+       {{texto1}}
+    </div>
+
+    <div class="highlight-text">
+       {{texto2}}
+    </div>
+    
+    <div class="footer-text">
+       {{texto3}}
+    </div>
+  </body>
+</html>
+
+

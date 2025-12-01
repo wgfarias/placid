@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Minimalist - Slide Dark</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+      :root {
+        --cor-primaria: #e65100;
+        --cor-secundaria: #1a1a1a;
+        --fonte: 'Inter', sans-serif;
+        --cor-texto-primario: #ffffff;
+        --cor-fundo: #333333; /* Cinza escuro default */
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        width: 1080px;
+        height: 1350px;
+        overflow: hidden;
+        background-color: var(--cor-fundo);
+        font-family: var(--fonte, "Inter");
+        color: var(--cor-texto-primario);
+        display: flex;
+        flex-direction: column;
+        padding: 120px 80px;
+        position: relative;
+        text-align: right;
+      }
+
+      .logo {
+        height: 50px;
+        width: auto;
+        margin-bottom: 40px;
+      }
+
+      .content-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: center;
+        height: 100%;
+        z-index: 2;
+      }
+
+      .title {
+        font-size: 90px;
+        font-weight: 600;
+        line-height: 1.1;
+        letter-spacing: -0.03em;
+        margin-bottom: 60px;
+        color: var(--cor-texto-primario);
+      }
+
+      .text-block {
+        font-size: 45px;
+        line-height: 1.5;
+        font-weight: 400;
+        margin-bottom: 40px;
+        max-width: 100%;
+      }
+
+      .highlight {
+        color: var(--cor-primaria, #e0e0e0); /* Destaque com cor primária */
+        font-weight: 600;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content-wrapper">
+      <img class="logo" src="https://placehold.co/200x100/transparent/white?text=LOGO" alt="Logo" />
+      <h1 class="title">Onde está sangrando?</h1>
+      
+      <div class="text-block">
+        Custo com alimentos = 28% a 35% da sua operação<br><br>
+        Desses, até 10% vai pro LIXO antes de virar prato.<br><br>
+        Faça as contas... dói, né?
+      </div>
+    </div>
+  </body>
+</html>
+

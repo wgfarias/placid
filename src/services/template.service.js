@@ -11,27 +11,33 @@ class TemplateService {
   }
 
   /**
-   * Lista todos os templates disponíveis
+   * Lista todos os templates disponíveis (recursivamente)
    * @returns {Promise<Array>} - Lista de templates
    */
   async getAllTemplates() {
     try {
-      // Ler o diretório de templates
-      const files = await fs.readdir(this.templatesDir);
+      const files = await this.getFilesRecursively(this.templatesDir);
 
       // Filtrar apenas arquivos HTML
       const htmlFiles = files.filter((file) => file.endsWith(".html"));
 
       // Mapear informações dos templates
       const templates = await Promise.all(
-        htmlFiles.map(async (file) => {
-          const filePath = path.join(this.templatesDir, file);
+        htmlFiles.map(async (filePath) => {
           const stats = await fs.stat(filePath);
+          const fileName = path.basename(filePath);
+          const id = path.basename(filePath, ".html");
+          const relativePath = path.relative(this.templatesDir, filePath);
+          
+          // Para manter compatibilidade, o ID é o nome do arquivo sem extensão
+          // Se houver duplicatas em pastas diferentes, isso pode ser um problema,
+          // mas assumiremos nomes únicos por enquanto (ex: tema_tipo.html)
 
           return {
-            id: path.basename(file, ".html"),
-            name: this.formatTemplateName(path.basename(file, ".html")),
-            file: file,
+            id: id,
+            name: this.formatTemplateName(id),
+            file: fileName,
+            relativePath: relativePath,
             path: filePath,
             created: stats.birthtime,
             modified: stats.mtime,
@@ -48,17 +54,46 @@ class TemplateService {
   }
 
   /**
+   * Helper para listar arquivos recursivamente
+   */
+  async getFilesRecursively(dir) {
+    const dirents = await fs.readdir(dir, { withFileTypes: true });
+    const files = await Promise.all(
+      dirents.map((dirent) => {
+        const res = path.join(dir, dirent.name);
+        return dirent.isDirectory() ? this.getFilesRecursively(res) : res;
+      })
+    );
+    return files.flat();
+  }
+
+  /**
    * Obtém um template pelo ID
    * @param {string} id - ID do template
    * @returns {Promise<Object>} - Informações do template
    */
   async getTemplateById(id) {
     try {
-      const fileName = `${id}.html`;
-      const filePath = path.join(this.templatesDir, fileName);
+      // Tenta encontrar o arquivo
+      // Primeiro, verifica se existe direto na raiz (comportamento antigo)
+      let filePath = path.join(this.templatesDir, `${id}.html`);
+      
+      try {
+        await fs.access(filePath);
+      } catch (err) {
+        // Se não achar na raiz, procura recursivamente
+        const allFiles = await this.getFilesRecursively(this.templatesDir);
+        const found = allFiles.find(file => path.basename(file, '.html') === id);
+        
+        if (found) {
+          filePath = found;
+        } else {
+          throw new Error(`Template não encontrado: ${id}`);
+        }
+      }
 
-      // Verificar se o arquivo existe
-      await fs.access(filePath);
+      const fileName = path.basename(filePath);
+
 
       // Obter estatísticas do arquivo
       const stats = await fs.stat(filePath);
