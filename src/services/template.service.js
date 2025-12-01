@@ -12,16 +12,42 @@ class TemplateService {
 
   /**
    * Lista todos os templates disponíveis (recursivamente)
+   * Retorna estrutura organizada se encontrar manifesto
    * @returns {Promise<Array>} - Lista de templates
    */
   async getAllTemplates() {
     try {
+      // Verificar se existem subpastas com manifesto
+      const entries = await fs.readdir(this.templatesDir, { withFileTypes: true });
+      const directories = entries.filter(dirent => dirent.isDirectory() && !['demo'].includes(dirent.name));
+      
+      // Se encontrarmos diretórios de família (ex: new_minimalist)
+      const families = [];
+      
+      for (const dir of directories) {
+        const manifestPath = path.join(this.templatesDir, dir.name, 'manifest.js');
+        try {
+          await fs.access(manifestPath);
+          // Carregar manifesto se existir
+          const manifest = require(manifestPath);
+          // Adicionar caminho relativo aos previews
+          if (manifest.previews) {
+             // Ajustar paths se necessário, mas o manifesto já deve ter caminhos públicos
+          }
+          families.push({
+            type: 'family',
+            ...manifest
+          });
+        } catch (e) {
+          // Sem manifesto, ignorar ou tratar como pasta comum
+        }
+      }
+
+      // Buscar arquivos soltos (legado)
       const files = await this.getFilesRecursively(this.templatesDir);
+      const htmlFiles = files.filter((file) => file.endsWith(".html") && !file.includes('demo/')); // Ignorar pasta demo
 
-      // Filtrar apenas arquivos HTML
-      const htmlFiles = files.filter((file) => file.endsWith(".html"));
-
-      // Mapear informações dos templates
+      // Mapear informações dos templates soltos
       const templates = await Promise.all(
         htmlFiles.map(async (filePath) => {
           const stats = await fs.stat(filePath);
@@ -29,9 +55,11 @@ class TemplateService {
           const id = path.basename(filePath, ".html");
           const relativePath = path.relative(this.templatesDir, filePath);
           
-          // Para manter compatibilidade, o ID é o nome do arquivo sem extensão
-          // Se houver duplicatas em pastas diferentes, isso pode ser um problema,
-          // mas assumiremos nomes únicos por enquanto (ex: tema_tipo.html)
+          // Verificar se este arquivo pertence a uma família já listada
+          const parentDir = path.dirname(relativePath).split(path.sep)[0];
+          const isFamilyMember = families.some(f => f.id === parentDir);
+          
+          if (isFamilyMember) return null; // Pula se já está na família
 
           return {
             id: id,
@@ -46,7 +74,8 @@ class TemplateService {
         })
       );
 
-      return templates;
+      // Juntar famílias e templates soltos
+      return [...families, ...templates.filter(Boolean)];
     } catch (error) {
       console.error("Erro ao listar templates:", error);
       throw new Error(`Falha ao listar templates: ${error.message}`);
