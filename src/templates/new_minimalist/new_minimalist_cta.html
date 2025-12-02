@@ -13,8 +13,7 @@
         --cor-secundaria: {{cor_secundaria}};
         --fonte: {{fonte}}, sans-serif;
         --cor-texto-primario: #ffffff;
-        --cor-check: #4caf50; /* Padrão verde, ou parametrizável */
-        --cor-fundo: {{background_color}}; /* Cor de fundo parametrizável */
+        --cor-fundo: {{background_color}};
       }
 
       * {
@@ -47,16 +46,6 @@
         background: radial-gradient(circle, rgba(50,50,50,0.8) 0%, var(--cor-secundaria, rgba(20,20,20,1)) 100%);
         z-index: 0;
       }
-      
-      .background-image {
-         position: absolute;
-         top: 0; left: 0; width: 100%; height: 100%;
-         background-image: url('{{backgroundImage}}');
-         background-size: cover;
-         opacity: 0.2;
-         z-index: 0;
-         filter: blur(10px);
-      }
 
       .logo {
         position: absolute;
@@ -83,79 +72,32 @@
         line-height: 1.1;
         margin-bottom: 60px;
         letter-spacing: -0.02em;
-        color: var(--cor-texto-primario);
       }
 
-      .checklist {
-        display: flex;
-        flex-direction: column;
-        gap: 25px;
-        margin-bottom: 80px;
-        text-align: left;
-      }
-
-      .check-item {
-        display: flex;
-        align-items: center;
+      .texto2 {
         font-size: 50px;
-        font-weight: 400;
+        line-height: 1.4;
+        margin-bottom: 60px;
       }
 
-      .check-icon {
-        margin-right: 20px;
-        color: var(--cor-check);
-        font-size: 45px;
-      }
-      
-      .footer-block {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-        width: 100%;
-      }
-
-      .final-cta {
-        font-size: 50px;
-        margin-bottom: 20px;
-      }
-      
-      .action-row {
+      .texto3 {
         font-size: 50px;
         font-weight: 600;
-        display: flex;
-        align-items: center;
-        gap: 10px;
+        line-height: 1.4;
       }
-      
-      .pin-row {
-        font-size: 50px;
-        font-weight: 600;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-      }
-
     </style>
   </head>
   <body>
     <div class="background-overlay"></div>
-    <div class="background-image"></div>
 
     <img class="logo" src="{{logoUrl}}" alt="Logo" />
 
     <div class="content-wrapper">
       <h1 class="title">{{texto1}}</h1>
 
-      <div class="checklist">
-        <!-- Itens gerados dinamicamente (antigo itemsHtml) -->
-        {{texto2}}
-      </div>
+      <div class="texto2">{{texto2}}</div>
 
-      <!-- Rodapé unificado -->
-      <div class="footer-block">
-        {{texto3}}
-      </div>
+      <div class="texto3">{{texto3}}</div>
     </div>
   </body>
 </html>
