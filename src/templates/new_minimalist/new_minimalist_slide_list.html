@@ -12,7 +12,7 @@
         --cor-secundaria: {{cor_secundaria}};
         --fonte: {{fonte}}, sans-serif;
         --cor-texto-primario: #ffffff;
-        --cor-fundo: #333333;
+        --cor-fundo: {{background_color}}; /* Cor de fundo parametrizável */
       }
 
       * {
@@ -106,14 +106,12 @@
 
       <h1 class="title">{{texto1}}</h1>
 
-      <!-- Items da lista devem ser montados no backend ou frontend antes de enviar -->
+      <!-- Items da lista -->
       <div class="list-container">
-        <ul>
-          {{itemsHtml}}
-        </ul>
+        {{texto2}}
       </div>
 
-      <img class="alert-icon" src="{{image}}" alt="Alert" />
+      <img class="alert-icon" src="{{icon}}" alt="Alert" />
     </div>
   </body>
 </html>

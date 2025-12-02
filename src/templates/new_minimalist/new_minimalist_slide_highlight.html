@@ -8,9 +8,10 @@
       @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
 
       :root {
-        --cor-primaria: {{cor_primaria}}; /* Background */
+        --cor-primaria: {{cor_primaria}};
         --fonte: {{fonte}}, sans-serif;
         --cor-texto-primario: #ffffff;
+        --cor-fundo: {{background_color}}; /* Cor de fundo parametrizável */
       }
 
       * {
@@ -23,7 +24,7 @@
         width: 1080px;
         height: 1350px;
         overflow: hidden;
-        background-color: var(--cor-primaria, #e65100);
+        background-color: var(--cor-fundo, #e65100);
         font-family: var(--fonte, "Inter");
         color: var(--cor-texto-primario);
         display: flex;
