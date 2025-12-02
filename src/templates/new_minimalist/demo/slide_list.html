@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>New Minimalist - Slide List</title>
     <style>
-      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+      /* Fontes populares */
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&family=Lato:wght@400;700&family=Montserrat:wght@400;500;600;700&family=Oswald:wght@400;500;600;700&family=Raleway:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Merriweather:wght@400;700&family=Source+Sans+Pro:wght@400;600;700&family=Ubuntu:wght@400;500;700&family=PT+Sans:wght@400;700&family=Nunito:wght@400;500;600;700&family=Rubik:wght@400;500;600;700&family=Work+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Bebas+Neue&family=Barlow:wght@400;500;600;700&family=Quicksand:wght@400;500;600;700&family=Josefin+Sans:wght@400;500;600;700&family=Noto+Color+Emoji&display=swap");
 
       :root {
         --cor-primaria: #78909c; /* Cor dos marcadores */
@@ -26,7 +27,7 @@
         height: 1350px;
         overflow: hidden;
         background-color: var(--cor-fundo);
-        font-family: var(--fonte, "Inter");
+        font-family: var(--fonte, "Inter"), "Noto Color Emoji", sans-serif;
         color: var(--cor-texto-primario);
         display: flex;
         flex-direction: column;
@@ -94,9 +95,9 @@
       }
 
       .alert-icon {
-        width: 150px;
-        height: 150px;
-        object-fit: contain;
+        font-size: 120px;
+        line-height: 1;
+        text-align: center;
       }
     </style>
   </head>
@@ -117,7 +118,7 @@
         </ul>
       </div>
 
-      <img class="alert-icon" src="https://placehold.co/150x150/e65100/white?text=!" alt="Alert" />
+      <div class="alert-icon">⚠️</div>
     </div>
   </body>
 </html>
