@@ -99,9 +99,11 @@ class ImageService {
       // Substituir placeholders com os dados fornecidos
       for (const [key, value] of Object.entries(data)) {
         const placeholder = `{{${key}}}`;
+        // Converter quebras de linha para <br> em campos de texto
+        const processedValue = String(value).replace(/\n/g, '<br>');
         templateContent = templateContent.replace(
           new RegExp(placeholder, "g"),
-          value
+          processedValue
         );
       }
 
