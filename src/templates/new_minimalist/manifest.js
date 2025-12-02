@@ -35,7 +35,7 @@ module.exports = {
       fields: [
         { name: "texto1", label: "Título", type: "text" },
         { name: "texto2", label: "Texto Completo", type: "textarea" },
-        { name: "icon", label: "Ícone/Imagem", type: "icon" },
+        { name: "icon", label: "Ícone (emoji)", type: "text" },
       ],
     },
     {
@@ -70,7 +70,7 @@ module.exports = {
       fields: [
         { name: "texto1", label: "Título da Lista", type: "text" },
         { name: "texto2", label: "Texto Completo", type: "textarea" },
-        { name: "icon", label: "Ícone/Imagem", type: "icon" },
+        { name: "icon", label: "Ícone (emoji)", type: "text" },
         { name: "background_color", label: "Cor de Fundo", type: "color" },
       ],
     },

@@ -95,9 +95,9 @@
       }
 
       .alert-icon {
-        width: 150px;
-        height: 150px;
-        object-fit: contain;
+        font-size: 120px;
+        line-height: 1;
+        text-align: center;
       }
     </style>
   </head>
@@ -108,13 +108,9 @@
       <h1 class="title">{{texto1}}</h1>
 
       <!-- Items da lista -->
-      <div class="list-container">
-        {{texto2}}
-      </div>
+      <div class="list-container">{{texto2}}</div>
 
-      <img class="alert-icon" src="{{icon}}" alt="Alert" />
+      <div class="alert-icon">{{icon}}</div>
     </div>
   </body>
 </html>
-
-
