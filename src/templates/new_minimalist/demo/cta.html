@@ -37,14 +37,21 @@
         text-align: center;
       }
 
-      .background-overlay {
+      .background {
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        background: radial-gradient(circle, rgba(50,50,50,0.8) 0%, var(--cor-secundaria, rgba(20,20,20,1)) 100%);
+        background-image: url("https://blogviagemgourmet.com.br/wp-content/uploads/2025/01/casa_201.jpeg");
+        background-size: cover;
+        background-position: center;
         z-index: 0;
+        filter: grayscale(100%); /* Efeito preto e branco */
+      }
+
+      .background-overlay {
+        display: none; /* Overlay global removido para focar na caixa */
       }
 
       .logo {
@@ -62,51 +69,77 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 85%;
-        margin-top: 100px;
+        width: 900px; /* Largura fixa para o cartão */
+        margin-top: 80px;
+        background: rgba(20, 20, 20, 0.75); /* Fundo escuro translúcido */
+        backdrop-filter: blur(20px); /* Efeito de vidro fosco */
+        -webkit-backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.1); /* Borda sutil */
+        border-radius: 40px; /* Bordas bem arredondadas */
+        padding: 80px 60px; /* Espaçamento interno generoso */
+        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5); /* Sombra para profundidade */
       }
 
       .title {
-        font-size: 65px;
-        font-weight: 600;
+        font-size: 56px; /* Tamanho ajustado para o cartão */
+        font-weight: 700;
         line-height: 1.1;
-        margin-bottom: 60px;
+        margin-bottom: 50px;
         letter-spacing: -0.02em;
+        text-align: center;
       }
 
-      .texto2 {
-        font-size: 50px;
-        line-height: 1.4;
+      /* Nova estrutura da lista */
+      .checklist {
+        display: inline-block; /* Ajusta ao tamanho do conteúdo */
+        text-align: center; /* Alinha o texto ao centro */
+        font-size: 38px;
+        line-height: 1.6;
+        width: 100%; /* Permite ocupar a largura mas respeitando o alinhamento */
+        max-width: 800px; /* Limita a largura para leitura */
         margin-bottom: 60px;
+        padding: 0 40px; /* Garante margem interna */
       }
 
       .texto3 {
-        font-size: 50px;
-        font-weight: 600;
-        line-height: 1.4;
+        font-size: 32px;
+        font-weight: 500;
+        line-height: 1.5;
+        padding-top: 30px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1); /* Separação visual */
+        width: 100%;
+        color: #e0e0e0;
+      }
+
+      .highlight {
+        color: var(--cor-primaria);
+        font-weight: 700;
       }
     </style>
   </head>
   <body>
+    <div class="background"></div>
     <div class="background-overlay"></div>
 
-    <img class="logo" src="https://placehold.co/200x100/transparent/white?text=LOGO" alt="Logo" />
+    <img
+      class="logo"
+      src="https://placehold.co/200x100/transparent/white?text=LOGO"
+      alt="Logo"
+    />
 
     <div class="content-wrapper">
       <h1 class="title">Quer economizar muito e colocar dinheiro no bolso?</h1>
 
-      <div class="texto2">
-        ✅ Audite seu desperdício<br>
-        ✅ Padronize receitas<br>
-        ✅ Controle estoque (PEPS)<br>
-        ✅ Treine sua equipe<br>
+      <div class="checklist">
+        ✅ Audite seu desperdício<br />
+        ✅ Padronize receitas<br />
+        ✅ Controle estoque (PEPS)<br />
+        ✅ Treine sua equipe<br />
         ✅ Ajuste porções
       </div>
 
       <div class="texto3">
-        💬 Qual dessas ações você vai implementar HOJE?<br>
-        Comenta aqui 👇<br>
-        📌 Salva pra não esquecer!
+        Qual dessas ações você vai implementar hoje Comenta aqui 👇
       </div>
     </div>
   </body>
