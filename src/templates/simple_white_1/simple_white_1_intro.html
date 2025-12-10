@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple White 1 - Intro Slide</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+      :root {
+        /* Variáveis que virão do usuário */
+        --cor-primaria: {{cor_primaria}};
+        --cor-texto-box: #ffffff;
+        --cor-titulo: #ffffff;
+        --fonte-principal: {{fonte}}, "Inter", sans-serif;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        width: 1080px;
+        height: 1350px;
+        overflow: hidden;
+        background-color: var(--cor-primaria);
+        font-family: var(--fonte-principal);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+      }
+
+      /* --- Elementos Geométricos de Fundo --- */
+      .bg-shape {
+        position: absolute;
+        border-radius: 50%;
+        filter: blur(80px);
+        opacity: 0.4;
+        z-index: 0;
+      }
+
+      .shape-1 {
+        width: 800px;
+        height: 800px;
+        background: rgba(255, 255, 255, 0.1);
+        top: -200px;
+        left: -200px;
+      }
+
+      .shape-2 {
+        width: 600px;
+        height: 600px;
+        background: rgba(0, 0, 0, 0.2);
+        bottom: -100px;
+        right: -100px;
+      }
+      
+      .shape-3 {
+        width: 300px;
+        height: 300px;
+        background: rgba(255, 255, 255, 0.15);
+        top: 40%;
+        right: 10%;
+      }
+
+      /* Padrão de linhas sutis */
+      .texture-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: radial-gradient(
+          rgba(255, 255, 255, 0.1) 1px,
+          transparent 1px
+        );
+        background-size: 40px 40px;
+        opacity: 0.3;
+        z-index: 0;
+      }
+
+      /* --- Caixa Central Premium --- */
+      .content-box {
+        width: 850px;
+        padding: 100px 80px;
+        
+        /* Fundo base com gradiente sutil */
+        background: linear-gradient(
+          145deg, 
+          rgba(255, 255, 255, 0.12) 0%, 
+          rgba(255, 255, 255, 0.04) 100%
+        );
+        
+        backdrop-filter: blur(25px);
+        -webkit-backdrop-filter: blur(25px);
+        border-radius: 30px;
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        position: relative;
+        z-index: 10;
+        
+        /* Sombra mais sutil */
+        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+      }
+
+      /* Borda Gradiente Brilhante (Pseudo-elemento) */
+      .content-box::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: 30px; 
+        
+        /* Borda mais visível */
+        padding: 3px; 
+        
+        /* Gradiente sutil (luz suave) */
+        background: linear-gradient(
+          135deg, 
+          rgba(255, 255, 255, 0.35) 0%, 
+          rgba(255, 255, 255, 0.1) 30%,
+          rgba(255, 255, 255, 0.02) 50%,
+          rgba(255, 255, 255, 0.0) 100%
+        ); 
+        
+        -webkit-mask: 
+           linear-gradient(#fff 0 0) content-box, 
+           linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude; 
+        pointer-events: none;
+      }
+      
+      /* Brilho interno extra */
+      .content-box::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: 30px;
+        background: radial-gradient(
+            circle at top left,
+            rgba(255,255,255,0.15),
+            transparent 70%
+        );
+        pointer-events: none;
+      }
+
+      .slide-number {
+        font-size: 24px;
+        font-weight: 600;
+        color: rgba(255, 255, 255, 0.6);
+        margin-bottom: 40px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+
+      .title {
+        font-size: 70px;
+        font-weight: 700;
+        line-height: 1.1;
+        color: var(--cor-titulo);
+        margin-bottom: 50px;
+        width: 100%;
+        text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      }
+
+      .description {
+        font-size: 42px;
+        line-height: 1.5;
+        font-weight: 400;
+        color: var(--cor-texto-box);
+        opacity: 0.95;
+      }
+
+      /* Barra decorativa simples */
+      .separator {
+        width: 80px;
+        height: 4px;
+        background-color: rgba(255, 255, 255, 0.5);
+        margin: 40px 0;
+        border-radius: 2px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <!-- Elementos de Fundo -->
+    <div class="texture-overlay"></div>
+    <div class="bg-shape shape-1"></div>
+    <div class="bg-shape shape-2"></div>
+    <div class="bg-shape shape-3"></div>
+    
+    <!-- Caixa de Conteúdo -->
+    <div class="content-box">
+      <div class="slide-number">{{slide_number}}</div>
+      
+      <h1 class="title">{{texto1}}</h1>
+      
+      <div class="separator"></div>
+
+      <p class="description">
+        {{texto2}}
+      </p>
+    </div>
+  </body>
+</html>

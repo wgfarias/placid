@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple White 1 - Person Slide (Slide 5)</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
+      :root {
+        --cor-destaque: {{cor_primaria}};
+        --cor-titulo: {{cor_titulo}};
+        --cor-texto: {{cor_texto}};
+        --bg-white: {{background_color}};
+        --fonte-principal: {{fonte}}, "Inter", sans-serif;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        width: 1080px;
+        height: 1350px;
+        overflow: hidden;
+        background-color: var(--bg-white, #ffffff);
+        font-family: var(--fonte-principal);
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        /* Sem padding na base para a imagem encostar */
+        padding: 100px 100px 0 100px;
+      }
+
+      /* --- Sombra SVG (Atrás da pessoa) --- */
+      .shadow-svg-container {
+        position: absolute;
+        bottom: 0;
+        right: -10%;
+        width: 120%;
+        height: 120%;
+        z-index: 0;
+        pointer-events: none;
+        opacity: 0.5;
+        filter: blur(60px);
+        transform: rotate(-45deg);
+        mix-blend-mode: multiply;
+      }
+
+      .content-wrapper {
+        position: relative;
+        z-index: 10;
+        height: 100%;
+        display: flex;
+        flex-direction: row; /* Lado a lado */
+        align-items: center;
+      }
+
+      /* Coluna de Texto (Esquerda) */
+      .text-col {
+        width: 55%;
+        padding-right: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        padding-bottom: 100px; /* Compensa o padding zero do body */
+      }
+
+      .category-tag {
+        font-size: 18px;
+        color: var(--cor-destaque);
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        margin-bottom: 30px;
+        display: inline-block;
+        border-bottom: 2px solid rgba(0,0,0,0.1);
+        padding-bottom: 5px;
+        align-self: flex-start;
+      }
+
+      .title {
+        font-size: 65px;
+        line-height: 1.1;
+        font-weight: 700;
+        color: var(--cor-titulo);
+        margin-bottom: 40px;
+        letter-spacing: -0.02em;
+      }
+
+      .description {
+        font-size: 36px;
+        line-height: 1.6;
+        color: var(--cor-texto);
+        font-weight: 300;
+      }
+
+      .description strong {
+        font-weight: 600;
+        color: var(--cor-destaque);
+      }
+
+      /* Coluna da Imagem (Direita) */
+      .image-col {
+        width: 45%;
+        height: 100%; /* Ocupa toda altura disponível */
+        position: absolute; /* Posicionamento absoluto para controle total da altura */
+        right: 0;
+        bottom: 0;
+        display: flex;
+        align-items: flex-end; /* Alinha na base */
+        justify-content: center;
+        z-index: 11; /* Fica acima de tudo */
+      }
+
+      /* Imagem "Recortada" */
+      .person-img {
+        height: 95%; /* Ocupa quase toda altura vertical (proporção alongada) */
+        width: auto;
+        max-width: 100%;
+        object-fit: contain;
+        filter: drop-shadow(-20px 10px 30px rgba(0,0,0,0.15));
+        /* Se a imagem for cortada na base, isso garante que encoste no fundo */
+        transform-origin: bottom center;
+        align-self: flex-end;
+      }
+
+      /* Número flutuante */
+      .slide-number {
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 24px;
+        color: #ccc;
+        font-weight: 500;
+        letter-spacing: 0.05em;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Sombra decorativa (Atrás da pessoa) -->
+    <div class="shadow-svg-container">
+      <svg
+        viewBox="0 0 800 800"
+        fill="#cccccc"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M600 0 C 650 100, 550 300, 400 400 C 250 500, 100 450, 0 400 L 0 0 Z"
+          opacity="0.3"
+        />
+        <path
+          d="M800 200 C 700 300, 600 500, 450 600 C 300 700, 200 600, 100 500"
+          opacity="0.2"
+          stroke="#cccccc"
+          stroke-width="80"
+          stroke-linecap="round"
+          fill="none"
+        />
+        <path
+          d="M900 0 C 800 150, 700 400, 600 600 C 500 800, 400 700, 300 600"
+          opacity="0.2"
+          stroke="#cccccc"
+          stroke-width="100"
+          stroke-linecap="round"
+          fill="none"
+        />
+        <ellipse
+          cx="600"
+          cy="200"
+          rx="20"
+          ry="300"
+          transform="rotate(30 600 200)"
+          opacity="0.2"
+        />
+      </svg>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="text-col">
+        <span class="slide-number">{{slide_number}}</span>
+
+        <span class="category-tag">{{texto1}}</span>
+
+        <h1 class="title">{{texto2}}</h1>
+
+        <p class="description">{{texto3}}</p>
+      </div>
+
+      <div class="image-col">
+        <img src="{{personImage}}" alt="Pessoa" class="person-img" />
+      </div>
+    </div>
+  </body>
+</html>

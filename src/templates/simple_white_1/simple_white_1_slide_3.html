@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple White 1 - Content Slide 3</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
+      :root {
+        --cor-destaque: {{cor_primaria}};
+        --cor-titulo: {{cor_titulo}};
+        --cor-texto: {{cor_texto}};
+        --bg-white: {{background_color}};
+        --fonte-principal: {{fonte}}, "Inter", sans-serif;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        width: 1080px;
+        height: 1350px;
+        overflow: hidden;
+        background-color: var(--bg-white, #ffffff);
+        font-family: var(--fonte-principal);
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        padding: 120px;
+      }
+
+      /* --- Sombra SVG (Equilíbrio no canto oposto) --- */
+      .shadow-svg-container {
+        position: absolute;
+        bottom: -10%;
+        left: -30%;
+        width: 140%;
+        height: 140%;
+        z-index: 0;
+        pointer-events: none;
+        opacity: 0.4;
+        filter: blur(50px);
+        transform: rotate(120deg);
+        mix-blend-mode: multiply;
+      }
+
+      /* --- Conteúdo --- */
+      .content-wrapper {
+        position: relative;
+        z-index: 10;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .header-row {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+        align-items: center;
+        margin-bottom: 80px;
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+        padding-bottom: 40px;
+      }
+
+      .slide-number {
+        font-size: 24px;
+        color: #999;
+        font-weight: 500;
+        letter-spacing: 0.05em;
+      }
+
+      .main-content {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        text-align: right;
+      }
+
+      .title {
+        font-size: 80px;
+        line-height: 1.05;
+        font-weight: 600;
+        color: var(--cor-titulo);
+        margin-bottom: 60px;
+        letter-spacing: -0.02em;
+        max-width: 95%;
+      }
+
+      /* Bloco de texto com detalhe na direita */
+      .text-block {
+        position: relative;
+        padding-right: 50px;
+        border-right: 4px solid var(--cor-destaque);
+        max-width: 90%;
+      }
+
+      .description {
+        font-size: 40px;
+        line-height: 1.6;
+        color: var(--cor-texto);
+        font-weight: 300;
+      }
+
+      .description strong {
+        font-weight: 600;
+        color: var(--cor-destaque);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Sombra decorativa (Canto inferior esquerdo) -->
+    <div class="shadow-svg-container">
+      <svg
+        viewBox="0 0 800 800"
+        fill="#cccccc"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M600 0 C 650 100, 550 300, 400 400 C 250 500, 100 450, 0 400 L 0 0 Z"
+          opacity="0.3"
+        />
+        <path
+          d="M800 200 C 700 300, 600 500, 450 600 C 300 700, 200 600, 100 500"
+          opacity="0.2"
+          stroke="#cccccc"
+          stroke-width="80"
+          stroke-linecap="round"
+          fill="none"
+        />
+        <ellipse
+          cx="600"
+          cy="200"
+          rx="20"
+          ry="300"
+          transform="rotate(30 600 200)"
+          opacity="0.2"
+        />
+      </svg>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="header-row">
+        <span class="slide-number">{{slide_number}}</span>
+      </div>
+
+      <div class="main-content">
+        <h1 class="title">{{texto1}}</h1>
+
+        <div class="text-block">
+          <p class="description">{{texto2}}</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

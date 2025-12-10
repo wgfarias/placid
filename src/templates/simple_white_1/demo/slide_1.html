@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple White 1 - Content Slide White</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
+      :root {
+        --cor-destaque: #7e2e85; /* Roxo */
+        --cor-titulo: #1a1a1a;
+        --cor-texto: #4a4a4a;
+        --bg-white: #ffffff;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        width: 1080px;
+        height: 1350px;
+        overflow: hidden;
+        background-color: var(--bg-white);
+        font-family: "Inter", sans-serif;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        padding: 120px;
+      }
+
+      /* --- Conteúdo --- */
+      .content-wrapper {
+        position: relative;
+        z-index: 10;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .header-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 100px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        padding-bottom: 40px;
+      }
+
+      .slide-number {
+        font-size: 24px;
+        color: #999;
+        font-weight: 500;
+        letter-spacing: 0.05em;
+      }
+
+      .category-tag {
+        font-size: 18px;
+        color: var(--cor-destaque);
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+      }
+
+      .main-content {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .title {
+        font-size: 80px;
+        line-height: 1.05;
+        font-weight: 600; /* Semi-bold para elegância */
+        color: var(--cor-titulo);
+        margin-bottom: 60px;
+        letter-spacing: -0.02em;
+        max-width: 90%;
+      }
+
+      /* Detalhe de design: barra lateral no texto */
+      .text-block {
+        position: relative;
+        padding-left: 50px;
+        border-left: 4px solid var(--cor-destaque);
+      }
+
+      .description {
+        font-size: 40px;
+        line-height: 1.6;
+        color: var(--cor-texto);
+        font-weight: 300; /* Light para contraste com o título */
+      }
+
+      .description strong {
+        font-weight: 600;
+        color: var(--cor-destaque);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content-wrapper">
+      <div class="header-row">
+        <span class="slide-number">02</span>
+        <span class="category-tag">Conceito</span>
+      </div>
+
+      <div class="main-content">
+        <h1 class="title">A simplicidade é o último grau de sofisticação.</h1>
+
+        <div class="text-block">
+          <p class="description">
+            Ao remover o desnecessário, o essencial se manifesta. O design
+            minimalista não é sobre falta de elementos, mas sobre a
+            <strong>presença de significado</strong> em cada detalhe escolhido.
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

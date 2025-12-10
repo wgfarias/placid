@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple White 1 - Intro Slide</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+      :root {
+        /* Variáveis que virão do usuário */
+        --cor-primaria: #7e2e85; /* Roxo (exemplo) */
+        --cor-texto-box: #ffffff;
+        --cor-titulo: #ffffff;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        width: 1080px;
+        height: 1350px;
+        overflow: hidden;
+        background-color: var(--cor-primaria);
+        font-family: "Inter", sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+      }
+
+      /* --- Elementos Geométricos de Fundo --- */
+      .bg-shape {
+        position: absolute;
+        border-radius: 50%;
+        filter: blur(80px);
+        opacity: 0.4;
+        z-index: 0;
+      }
+
+      .shape-1 {
+        width: 800px;
+        height: 800px;
+        background: rgba(255, 255, 255, 0.1);
+        top: -200px;
+        left: -200px;
+      }
+
+      .shape-2 {
+        width: 600px;
+        height: 600px;
+        background: rgba(0, 0, 0, 0.2);
+        bottom: -100px;
+        right: -100px;
+      }
+
+      .shape-3 {
+        width: 300px;
+        height: 300px;
+        background: rgba(255, 255, 255, 0.15);
+        top: 40%;
+        right: 10%;
+      }
+
+      /* Padrão de linhas sutis */
+      .texture-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: radial-gradient(
+          rgba(255, 255, 255, 0.1) 1px,
+          transparent 1px
+        );
+        background-size: 40px 40px;
+        opacity: 0.3;
+        z-index: 0;
+      }
+
+      /* --- Sombra SVG SUTIL --- */
+      .shadow-svg-container {
+        position: absolute;
+        top: -20%;
+        right: -20%;
+        width: 150%;
+        height: 150%;
+        z-index: 5; /* Abaixo da caixa */
+        pointer-events: none;
+        opacity: 0.6; /* Opacidade do container */
+        mix-blend-mode: multiply;
+        filter: blur(60px); /* Blur bem alto */
+        transform: rotate(-15deg);
+      }
+
+      /* --- Caixa Central Premium --- */
+      .content-box {
+        width: 850px;
+        padding: 100px 80px;
+
+        /* Fundo base com gradiente sutil */
+        background: linear-gradient(
+          145deg,
+          rgba(255, 255, 255, 0.02) 0%,
+          rgba(255, 255, 255, 0.04) 100%
+        );
+
+        backdrop-filter: blur(25px);
+        -webkit-backdrop-filter: blur(25px);
+        border-radius: 30px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        position: relative;
+        z-index: 10;
+
+        /* Sombra mais profunda */
+        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+      }
+
+      /* Borda Gradiente Brilhante (Pseudo-elemento) */
+      .content-box::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: 30px;
+        padding: 2px; /* Espessura da borda brilhante */
+
+        /* Gradiente que simula luz vindo do canto superior esquerdo */
+        background: linear-gradient(
+          135deg,
+          rgba(255, 255, 255, 0.6) 0%,
+          rgba(255, 255, 255, 0.1) 30%,
+          rgba(255, 255, 255, 0.05) 50%,
+          rgba(255, 255, 255, 0) 100%
+        );
+
+        -webkit-mask: linear-gradient(#fff 0 0) content-box,
+          linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+        pointer-events: none;
+      }
+
+      /* Brilho interno extra */
+      .content-box::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: 30px;
+        background: radial-gradient(
+          circle at top left,
+          rgba(255, 255, 255, 0.15),
+          transparent 70%
+        );
+        pointer-events: none;
+      }
+
+      .slide-number {
+        font-size: 24px;
+        font-weight: 600;
+        color: rgba(255, 255, 255, 0.6);
+        margin-bottom: 40px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+
+      .title {
+        font-size: 70px;
+        font-weight: 700;
+        line-height: 1.1;
+        color: var(--cor-titulo);
+        margin-bottom: 50px;
+        width: 100%;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .description {
+        font-size: 42px;
+        line-height: 1.5;
+        font-weight: 400;
+        color: var(--cor-texto-box);
+        opacity: 0.95;
+      }
+
+      /* Barra decorativa simples */
+      .separator {
+        width: 80px;
+        height: 4px;
+        background-color: rgba(255, 255, 255, 0.5);
+        margin: 40px 0;
+        border-radius: 2px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Elementos de Fundo -->
+    <div class="texture-overlay"></div>
+    <div class="bg-shape shape-1"></div>
+    <div class="bg-shape shape-2"></div>
+    <div class="bg-shape shape-3"></div>
+
+    <!-- Sombra SVG - Cores muito mais sutis (#cccccc) -->
+    <div class="shadow-svg-container">
+      <svg
+        viewBox="0 0 800 800"
+        fill="#cccccc"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <!-- Opacidades reduzidas -->
+        <path
+          d="M600 0 C 650 100, 550 300, 400 400 C 250 500, 100 450, 0 400 L 0 0 Z"
+          opacity="0.3"
+        />
+        <path
+          d="M800 200 C 700 300, 600 500, 450 600 C 300 700, 200 600, 100 500"
+          opacity="0.2"
+          stroke="#cccccc"
+          stroke-width="80"
+          stroke-linecap="round"
+          fill="none"
+        />
+        <path
+          d="M900 0 C 800 150, 700 400, 600 600 C 500 800, 400 700, 300 600"
+          opacity="0.2"
+          stroke="#cccccc"
+          stroke-width="100"
+          stroke-linecap="round"
+          fill="none"
+        />
+        <ellipse
+          cx="600"
+          cy="200"
+          rx="20"
+          ry="300"
+          transform="rotate(30 600 200)"
+          opacity="0.2"
+        />
+        <ellipse
+          cx="700"
+          cy="100"
+          rx="30"
+          ry="400"
+          transform="rotate(45 700 100)"
+          opacity="0.2"
+        />
+        <ellipse
+          cx="500"
+          cy="300"
+          rx="25"
+          ry="350"
+          transform="rotate(15 500 300)"
+          opacity="0.2"
+        />
+      </svg>
+    </div>
+
+    <!-- Caixa de Conteúdo -->
+    <div class="content-box">
+      <div class="slide-number">01</div>
+
+      <h1 class="title">O que é automação?</h1>
+
+      <div class="separator"></div>
+
+      <p class="description">
+        Automação não é apenas sobre robôs. É sobre criar sistemas que trabalham
+        para você enquanto você foca no que realmente importa: estratégia e
+        criatividade.
+      </p>
+    </div>
+  </body>
+</html>

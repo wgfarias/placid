@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple White 1 - Content Slide 2</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
+      :root {
+        --cor-destaque: {{cor_primaria}};
+        --cor-titulo: {{cor_titulo}};
+        --cor-texto: {{cor_texto}};
+        --bg-white: {{background_color}};
+        --fonte-principal: {{fonte}}, "Inter", sans-serif;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        width: 1080px;
+        height: 1350px;
+        overflow: hidden;
+        background-color: var(--bg-white, #ffffff);
+        font-family: var(--fonte-principal);
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        padding: 80px;
+      }
+
+      /* --- Sombra SVG (Consistência) --- */
+      .shadow-svg-container {
+        position: absolute;
+        bottom: -20%;
+        left: -20%;
+        width: 150%;
+        height: 150%;
+        z-index: 0;
+        pointer-events: none;
+        opacity: 0.4;
+        filter: blur(60px);
+        transform: rotate(45deg);
+        mix-blend-mode: multiply;
+      }
+
+      /* --- Layout --- */
+      .content-wrapper {
+        position: relative;
+        z-index: 10;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+
+      /* Imagem de Cabeçalho */
+      .image-container {
+        width: 100%;
+        height: 550px;
+        margin-bottom: 60px;
+        border-radius: 40px;
+        overflow: hidden;
+        box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+        position: relative;
+      }
+
+      .header-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+      }
+
+      /* Conteúdo de Texto */
+      .text-content {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 0 20px;
+      }
+
+      .title {
+        font-size: 60px;
+        line-height: 1.1;
+        font-weight: 600;
+        color: var(--cor-titulo);
+        margin-bottom: 40px;
+        letter-spacing: -0.02em;
+      }
+
+      .description {
+        font-size: 36px;
+        line-height: 1.6;
+        color: var(--cor-texto);
+        font-weight: 300;
+        max-width: 95%;
+      }
+
+      /* Número no canto inferior direito */
+      .slide-number-container {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+      }
+
+      .slide-number {
+        font-size: 120px;
+        font-weight: 700;
+        color: rgba(0,0,0,0.05);
+        line-height: 0.8;
+        letter-spacing: -0.05em;
+      }
+
+    </style>
+  </head>
+  <body>
+    <!-- Sombra decorativa (Fundo) -->
+    <div class="shadow-svg-container">
+      <svg viewBox="0 0 800 800" fill="#cccccc" xmlns="http://www.w3.org/2000/svg">
+        <path d="M600 0 C 650 100, 550 300, 400 400 C 250 500, 100 450, 0 400 L 0 0 Z" opacity="0.3"/>
+        <path d="M800 200 C 700 300, 600 500, 450 600 C 300 700, 200 600, 100 500" opacity="0.2" stroke="#cccccc" stroke-width="80" stroke-linecap="round" fill="none"/>
+        <ellipse cx="600" cy="200" rx="20" ry="300" transform="rotate(30 600 200)" opacity="0.2"/>
+      </svg>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="image-container">
+        <img 
+          src="{{backgroundImage}}" 
+          alt="Destaque" 
+          class="header-image"
+        />
+      </div>
+
+      <div class="text-content">
+        <h2 class="title">
+          {{texto1}}
+        </h2>
+
+        <p class="description">
+          {{texto2}}
+        </p>
+      </div>
+
+      <div class="slide-number-container">
+        <span class="slide-number">{{slide_number}}</span>
+      </div>
+    </div>
+  </body>
+</html>
