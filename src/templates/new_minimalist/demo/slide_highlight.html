@@ -12,6 +12,8 @@
         --cor-primaria: #e65100; /* Background */
         --fonte: 'Inter', sans-serif;
         --cor-texto-primario: #ffffff;
+        --fonte-titulo: "Inter", sans-serif;
+        --fonte-texto: "Inter", sans-serif;
       }
 
       * {
@@ -25,7 +27,7 @@
         height: 1350px;
         overflow: hidden;
         background-color: var(--cor-primaria, #e65100);
-        font-family: var(--fonte, "Inter"), "Noto Color Emoji", sans-serif;
+        font-family: var(--fonte-texto, "Inter"), "Noto Color Emoji", sans-serif;
         color: var(--cor-texto-primario);
         display: flex;
         flex-direction: column;
@@ -54,6 +56,7 @@
       }
 
       .highlight-text {
+        font-family: var(--fonte-titulo);
         font-size: 90px;
         font-weight: 800;
         line-height: 1.1;

@@ -95,6 +95,17 @@ module.exports = {
         default: "#1a1a1a",
       },
     ],
-    fonts: [{ name: "fonte", label: "Família de Fonte", default: "Inter" }],
+    fonts: [
+      {
+        name: "fonte",
+        label: "Família de Fonte dos títulos",
+        default: "Inter",
+      },
+      {
+        name: "fonte2",
+        label: "Família de Fonte dos textos",
+        default: "Inter",
+      },
+    ],
   },
 };

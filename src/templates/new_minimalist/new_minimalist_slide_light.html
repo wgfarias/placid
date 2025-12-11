@@ -11,7 +11,8 @@
       :root {
         --cor-primaria: {{cor_primaria}};
         --cor-secundaria: {{cor_secundaria}};
-        --fonte: {{fonte}}, sans-serif;
+        --fonte-titulo: {{fonte}}, sans-serif;
+        --fonte-texto: {{fonte2}}, sans-serif;
         --cor-texto-primario: #1a1a1a;
         --cor-fundo: #e5e5e5; /* Cinza claro default */
       }
@@ -27,7 +28,7 @@
         height: 1350px;
         overflow: hidden;
         background-color: var(--cor-fundo);
-        font-family: var(--fonte, "Inter"), "Noto Color Emoji", sans-serif;
+        font-family: var(--fonte-texto, "Inter"), "Noto Color Emoji", sans-serif;
         color: var(--cor-texto-primario);
         display: flex;
         flex-direction: column;
@@ -43,6 +44,7 @@
         letter-spacing: -0.03em;
         color: #000000;
         margin-bottom: 60px;
+        font-family: var(--fonte-titulo);
       }
 
       .content-text {
@@ -68,7 +70,7 @@
         line-height: 1;
         text-align: center;
       }
-      
+
       .content-block {
         display: flex;
         flex-direction: column;
@@ -82,12 +84,10 @@
     <div class="content-block">
       <h1 class="title">{{texto1}}</h1>
 
-      <div class="content-text">
-        {{texto2}}
-      </div>
+      <div class="content-text">{{texto2}}</div>
 
       <div class="decoration-bar"></div>
-      
+
       <div class="main-icon">{{icon}}</div>
     </div>
   </body>

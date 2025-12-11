@@ -12,6 +12,8 @@
         --cor-titulo: #1a1a1a;
         --cor-texto: #4a4a4a;
         --bg-white: #ffffff;
+        --fonte-titulo: "Inter", sans-serif;
+        --fonte-texto: "Inter", sans-serif;
       }
 
       * {
@@ -25,7 +27,7 @@
         height: 1350px;
         overflow: hidden;
         background-color: var(--bg-white);
-        font-family: "Inter", sans-serif;
+        font-family: var(--fonte-texto);
         display: flex;
         flex-direction: column;
         position: relative;
@@ -73,6 +75,7 @@
       }
 
       .title {
+        font-family: var(--fonte-titulo);
         font-size: 80px;
         line-height: 1.05;
         font-weight: 600; /* Semi-bold para elegância */

@@ -55,7 +55,11 @@ module.exports = {
       fields: [
         { name: "texto1", label: "Título", type: "text", required: true },
         { name: "texto2", label: "Texto Completo", type: "textarea" },
-        { name: "backgroundImage", label: "Imagem de Cabeçalho", type: "image" },
+        {
+          name: "backgroundImage",
+          label: "Imagem de Cabeçalho",
+          type: "image",
+        },
       ],
     },
     {
@@ -94,7 +98,12 @@ module.exports = {
       name: "Chamada para Ação (CTA)",
       type: "cta",
       fields: [
-        { name: "texto1", label: "Chamada Principal", type: "text", required: true },
+        {
+          name: "texto1",
+          label: "Chamada Principal",
+          type: "text",
+          required: true,
+        },
         { name: "texto2", label: "Subtítulo/Instrução", type: "text" },
         { name: "backgroundImage", label: "Imagem Circular", type: "image" },
       ],
@@ -107,11 +116,17 @@ module.exports = {
       { name: "cor_texto", label: "Cor do Texto", default: "#4a4a4a" },
       { name: "background_color", label: "Cor de Fundo", default: "#ffffff" },
     ],
-    fonts: [{ name: "fonte", label: "Família de Fonte", default: "Inter" }],
+    fonts: [
+      {
+        name: "fonte",
+        label: "Família de Fonte dos títulos",
+        default: "Inter",
+      },
+      {
+        name: "fonte2",
+        label: "Família de Fonte dos textos",
+        default: "Inter",
+      },
+    ],
   },
 };
-
-
-
-
-

@@ -11,7 +11,8 @@
       :root {
         --cor-primaria: {{cor_primaria}};
         --cor-secundaria: {{cor_secundaria}};
-        --fonte: {{fonte}}, sans-serif;
+        --fonte-titulo: {{fonte}}, sans-serif;
+        --fonte-texto: {{fonte2}}, sans-serif;
         --cor-texto-primario: #ffffff;
         --cor-fundo: {{background_color}};
       }
@@ -27,7 +28,7 @@
         height: 1350px;
         overflow: hidden;
         background-color: var(--cor-fundo, #1a1a1a);
-        font-family: var(--fonte, "Inter"), "Noto Color Emoji", sans-serif;
+        font-family: var(--fonte-texto, "Inter"), "Noto Color Emoji", sans-serif;
         color: var(--cor-texto-primario);
         display: flex;
         flex-direction: column;
@@ -87,6 +88,7 @@
         margin-bottom: 50px;
         letter-spacing: -0.02em;
         text-align: center;
+        font-family: var(--fonte-titulo);
       }
 
       /* Nova estrutura da lista */
@@ -126,9 +128,7 @@
     <div class="content-wrapper">
       <h1 class="title">{{texto1}}</h1>
 
-      <div class="checklist">
-        {{texto2}}
-      </div>
+      <div class="checklist">{{texto2}}</div>
 
       <div class="texto3">{{texto3}}</div>
     </div>

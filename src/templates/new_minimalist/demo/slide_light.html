@@ -14,6 +14,8 @@
         --fonte: 'Inter', sans-serif;
         --cor-texto-primario: #1a1a1a;
         --cor-fundo: #e5e5e5; /* Cinza claro default */
+        --fonte-titulo: "Inter", sans-serif;
+        --fonte-texto: "Inter", sans-serif;
       }
 
       * {
@@ -27,7 +29,7 @@
         height: 1350px;
         overflow: hidden;
         background-color: var(--cor-fundo);
-        font-family: var(--fonte, "Inter"), "Noto Color Emoji", sans-serif;
+        font-family: var(--fonte-texto, "Inter"), "Noto Color Emoji", sans-serif;
         color: var(--cor-texto-primario);
         display: flex;
         flex-direction: column;
@@ -37,6 +39,7 @@
       }
 
       .title {
+        font-family: var(--fonte-titulo);
         font-size: 85px;
         font-weight: 700;
         line-height: 1.1;

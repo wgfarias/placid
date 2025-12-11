@@ -9,11 +9,12 @@
       @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
 
       :root {
-        --cor-destaque: {{cor_primaria}}; 
+        --cor-destaque: {{cor_primaria}};
         --cor-titulo: {{cor_titulo}};
         --cor-subtitulo: {{cor_subtitulo}};
         --bg-white: {{background_color}};
-        --fonte-principal: {{fonte}}, "Inter", sans-serif;
+        --fonte-titulo: {{fonte}}, "Inter", sans-serif;
+        --fonte-texto: {{fonte2}}, "Inter", sans-serif;
       }
 
       * {
@@ -27,7 +28,7 @@
         height: 1350px;
         overflow: hidden;
         background-color: var(--bg-white, #ffffff);
-        font-family: var(--fonte-principal);
+        font-family: var(--fonte-texto);
         display: flex;
       }
 
@@ -98,7 +99,7 @@
       }
 
       .subtitle {
-        font-family: var(--fonte-principal);
+        font-family: var(--fonte-texto, "Inter"), sans-serif;
         font-size: 18px;
         font-weight: 600;
         text-transform: uppercase;
@@ -112,7 +113,7 @@
 
       /* Título Principal - Mais elegante */
       .main-title {
-        font-family: var(--fonte-principal);
+        font-family: var(--fonte-titulo, "Inter"), sans-serif;
         font-size: 80px;
         line-height: 1.1;
         font-weight: 600;
@@ -190,17 +191,11 @@
         </div>
 
         <div class="title-wrapper">
-          <h1 class="main-title">
-            {{texto1}}
-          </h1>
+          <h1 class="main-title">{{texto1}}</h1>
         </div>
 
         <div class="logo-footer">
-          <img
-            src="{{logoUrl}}"
-            alt="Logo"
-            class="logo-img"
-          />
+          <img src="{{logoUrl}}" alt="Logo" class="logo-img" />
         </div>
       </div>
     </div>

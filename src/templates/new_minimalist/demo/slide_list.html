@@ -14,6 +14,8 @@
         --fonte: 'Inter', sans-serif;
         --cor-texto-primario: #ffffff;
         --cor-fundo: #333333;
+        --fonte-titulo: "Inter", sans-serif;
+        --fonte-texto: "Inter", sans-serif;
       }
 
       * {
@@ -27,7 +29,7 @@
         height: 1350px;
         overflow: hidden;
         background-color: var(--cor-fundo);
-        font-family: var(--fonte, "Inter"), "Noto Color Emoji", sans-serif;
+        font-family: var(--fonte-texto, "Inter"), "Noto Color Emoji", sans-serif;
         color: var(--cor-texto-primario);
         display: flex;
         flex-direction: column;
@@ -49,6 +51,7 @@
       }
 
       .title {
+        font-family: var(--fonte-titulo);
         font-size: 80px;
         font-weight: 600;
         line-height: 1.1;

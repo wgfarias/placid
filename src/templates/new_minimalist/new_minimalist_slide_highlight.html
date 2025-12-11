@@ -10,7 +10,8 @@
 
       :root {
         --cor-primaria: {{cor_primaria}};
-        --fonte: {{fonte}}, sans-serif;
+        --fonte-titulo: {{fonte}}, sans-serif;
+        --fonte-texto: {{fonte2}}, sans-serif;
         --cor-texto-primario: #ffffff;
         --cor-fundo: {{background_color}}; /* Cor de fundo parametrizável */
       }
@@ -26,7 +27,7 @@
         height: 1350px;
         overflow: hidden;
         background-color: var(--cor-fundo, #e65100);
-        font-family: var(--fonte, "Inter"), "Noto Color Emoji", sans-serif;
+        font-family: var(--fonte-texto, "Inter"), "Noto Color Emoji", sans-serif;
         color: var(--cor-texto-primario);
         display: flex;
         flex-direction: column;
@@ -61,8 +62,9 @@
         letter-spacing: -0.03em;
         max-width: 90%;
         margin-bottom: 60px;
+        font-family: var(--fonte-titulo);
       }
-      
+
       .footer-text {
         font-size: 50px;
         font-weight: 500;
@@ -74,18 +76,10 @@
   <body>
     <!-- <img class="logo" src="{{logoUrl}}" alt="Logo" /> -->
 
-    <div class="top-text">
-       {{texto1}}
-    </div>
+    <div class="top-text">{{texto1}}</div>
 
-    <div class="highlight-text">
-       {{texto2}}
-    </div>
-    
-    <div class="footer-text">
-       {{texto3}}
-    </div>
+    <div class="highlight-text">{{texto2}}</div>
+
+    <div class="footer-text">{{texto3}}</div>
   </body>
 </html>
-
-

@@ -12,7 +12,8 @@
         --cor-titulo: {{cor_titulo}};
         --cor-texto: {{cor_texto}};
         --bg-white: {{background_color}};
-        --fonte-principal: {{fonte}}, "Inter", sans-serif;
+        --fonte-titulo: {{fonte}}, "Inter", sans-serif;
+        --fonte-texto: {{fonte2}}, "Inter", sans-serif;
       }
 
       * {
@@ -26,7 +27,7 @@
         height: 1350px;
         overflow: hidden;
         background-color: var(--bg-white, #ffffff);
-        font-family: var(--fonte-principal);
+        font-family: var(--fonte-texto);
         display: flex;
         flex-direction: column;
         position: relative;
@@ -112,10 +113,12 @@
       }
 
       .subtitle {
+        font-family: var(--fonte-texto, "Inter"), sans-serif;
         font-size: 40px;
+        font-weight: 400;
         color: var(--cor-texto);
-        font-weight: 300;
-        max-width: 80%;
+        margin-bottom: 60px;
+        opacity: 0.9;
       }
 
       /* Área de Ações */

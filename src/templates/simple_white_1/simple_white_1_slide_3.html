@@ -12,7 +12,8 @@
         --cor-titulo: {{cor_titulo}};
         --cor-texto: {{cor_texto}};
         --bg-white: {{background_color}};
-        --fonte-principal: {{fonte}}, "Inter", sans-serif;
+        --fonte-titulo: {{fonte}}, "Inter", sans-serif;
+        --fonte-texto: {{fonte2}}, "Inter", sans-serif;
       }
 
       * {
@@ -26,7 +27,7 @@
         height: 1350px;
         overflow: hidden;
         background-color: var(--bg-white, #ffffff);
-        font-family: var(--fonte-principal);
+        font-family: var(--fonte-texto);
         display: flex;
         flex-direction: column;
         position: relative;
@@ -91,6 +92,7 @@
         margin-bottom: 60px;
         letter-spacing: -0.02em;
         max-width: 95%;
+        font-family: var(--fonte-titulo);
       }
 
       /* Bloco de texto com detalhe na direita */

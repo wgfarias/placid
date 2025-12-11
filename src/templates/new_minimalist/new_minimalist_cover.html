@@ -11,7 +11,8 @@
       :root {
         --cor-primaria: {{cor_primaria}};      /* Botão, destaques */
         --cor-secundaria: {{cor_secundaria}};    /* Background, overlays */
-        --fonte: {{fonte}}, sans-serif;
+        --fonte-titulo: {{fonte}}, sans-serif;
+        --fonte-texto: {{fonte2}}, sans-serif;
         --cor-texto-primario: #ffffff;
         --cor-texto-secundario: #e0e0e0;
       }
@@ -27,7 +28,7 @@
         height: 1350px;
         overflow: hidden;
         background-color: var(--cor-secundaria, #1a1a1a);
-        font-family: var(--fonte, "Inter"), "Noto Color Emoji", sans-serif;
+        font-family: var(--fonte-texto, "Inter"), "Noto Color Emoji", sans-serif;
         position: relative;
         color: var(--cor-texto-primario);
       }
@@ -89,6 +90,7 @@
         margin-bottom: 30px;
         color: var(--cor-texto-primario);
         text-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+        font-family: var(--fonte-titulo);
       }
 
       .subtitle {
@@ -98,6 +100,7 @@
         color: var(--cor-texto-secundario);
         margin-bottom: 60px;
         max-width: 90%;
+        font-family: var(--fonte-texto);
       }
 
       .btn-continue {
@@ -127,5 +130,3 @@
     </div>
   </body>
 </html>
-
-

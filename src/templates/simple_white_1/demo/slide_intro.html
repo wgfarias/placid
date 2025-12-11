@@ -12,6 +12,8 @@
         --cor-primaria: #7e2e85; /* Roxo (exemplo) */
         --cor-texto-box: #ffffff;
         --cor-titulo: #ffffff;
+        --fonte-titulo: "Inter", sans-serif;
+        --fonte-texto: "Inter", sans-serif;
       }
 
       * {
@@ -25,7 +27,7 @@
         height: 1350px;
         overflow: hidden;
         background-color: var(--cor-primaria);
-        font-family: "Inter", sans-serif;
+        font-family: var(--fonte-texto);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -171,6 +173,7 @@
       }
 
       .title {
+        font-family: var(--fonte-titulo);
         font-size: 70px;
         font-weight: 700;
         line-height: 1.1;

@@ -8,11 +8,13 @@
       @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
 
       :root {
-        /* Variáveis que virão do usuário */
         --cor-primaria: {{cor_primaria}};
-        --cor-texto-box: #ffffff;
-        --cor-titulo: #ffffff;
-        --fonte-principal: {{fonte}}, "Inter", sans-serif;
+        --cor-secundaria: {{cor_secundaria}};
+        --fonte-titulo: {{fonte}}, sans-serif;
+        --fonte-texto: {{fonte2}}, sans-serif;
+        --cor-titulo: {{cor_titulo}};
+        --cor-texto: {{cor_texto}};
+        --bg-white: {{background_color}};
       }
 
       * {
@@ -25,12 +27,14 @@
         width: 1080px;
         height: 1350px;
         overflow: hidden;
-        background-color: var(--cor-primaria);
-        font-family: var(--fonte-principal);
+        background-color: var(--cor-primaria); /* Fundo colorido na intro */
+        font-family: var(--fonte-texto, "Inter"), sans-serif;
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         position: relative;
+        color: #ffffff;
       }
 
       /* --- Elementos Geométricos de Fundo --- */
@@ -57,7 +61,7 @@
         bottom: -100px;
         right: -100px;
       }
-      
+
       .shape-3 {
         width: 300px;
         height: 300px;
@@ -86,25 +90,25 @@
       .content-box {
         width: 850px;
         padding: 100px 80px;
-        
+
         /* Fundo base com gradiente sutil */
         background: linear-gradient(
-          145deg, 
-          rgba(255, 255, 255, 0.12) 0%, 
+          145deg,
+          rgba(255, 255, 255, 0.12) 0%,
           rgba(255, 255, 255, 0.04) 100%
         );
-        
+
         backdrop-filter: blur(25px);
         -webkit-backdrop-filter: blur(25px);
         border-radius: 30px;
-        
+
         display: flex;
         flex-direction: column;
         align-items: center;
         text-align: center;
         position: relative;
         z-index: 10;
-        
+
         /* Sombra mais sutil */
         box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
       }
@@ -114,28 +118,28 @@
         content: "";
         position: absolute;
         inset: 0;
-        border-radius: 30px; 
-        
+        border-radius: 30px;
+
         /* Borda mais visível */
-        padding: 3px; 
-        
+        padding: 3px;
+
         /* Gradiente sutil (luz suave) */
         background: linear-gradient(
-          135deg, 
-          rgba(255, 255, 255, 0.35) 0%, 
+          135deg,
+          rgba(255, 255, 255, 0.35) 0%,
           rgba(255, 255, 255, 0.1) 30%,
           rgba(255, 255, 255, 0.02) 50%,
           rgba(255, 255, 255, 0.0) 100%
-        ); 
-        
-        -webkit-mask: 
-           linear-gradient(#fff 0 0) content-box, 
+        );
+
+        -webkit-mask:
+           linear-gradient(#fff 0 0) content-box,
            linear-gradient(#fff 0 0);
         -webkit-mask-composite: xor;
-        mask-composite: exclude; 
+        mask-composite: exclude;
         pointer-events: none;
       }
-      
+
       /* Brilho interno extra */
       .content-box::after {
         content: "";
@@ -160,6 +164,7 @@
       }
 
       .title {
+        font-family: var(--fonte-titulo, "Inter"), sans-serif;
         font-size: 70px;
         font-weight: 700;
         line-height: 1.1;
@@ -185,7 +190,6 @@
         margin: 40px 0;
         border-radius: 2px;
       }
-
     </style>
   </head>
   <body>
@@ -194,18 +198,16 @@
     <div class="bg-shape shape-1"></div>
     <div class="bg-shape shape-2"></div>
     <div class="bg-shape shape-3"></div>
-    
+
     <!-- Caixa de Conteúdo -->
     <div class="content-box">
       <div class="slide-number">{{slide_number}}</div>
-      
+
       <h1 class="title">{{texto1}}</h1>
-      
+
       <div class="separator"></div>
 
-      <p class="description">
-        {{texto2}}
-      </p>
+      <p class="description">{{texto2}}</p>
     </div>
   </body>
 </html>

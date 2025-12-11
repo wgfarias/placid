@@ -12,6 +12,8 @@
         --cor-titulo: #1a1a1a;
         --cor-subtitulo: #666666;
         --bg-white: #ffffff;
+        --fonte-titulo: "Inter", sans-serif;
+        --fonte-texto: "Inter", sans-serif;
       }
 
       * {
@@ -25,7 +27,7 @@
         height: 1350px;
         overflow: hidden;
         background-color: var(--bg-white);
-        font-family: "Inter", sans-serif;
+        font-family: var(--fonte-texto);
         display: flex;
       }
 
@@ -96,7 +98,7 @@
       }
 
       .subtitle {
-        font-family: "Inter", sans-serif;
+        font-family: var(--fonte-texto);
         font-size: 18px;
         font-weight: 600;
         text-transform: uppercase;
@@ -110,7 +112,7 @@
 
       /* Título Principal - Mais elegante */
       .main-title {
-        font-family: "Inter", sans-serif;
+        font-family: var(--fonte-titulo);
         font-size: 80px;
         line-height: 1.1;
         font-weight: 600;
