@@ -30,77 +30,45 @@
         background-color: var(--bg-white, #ffffff);
         font-family: var(--fonte-texto);
         display: flex;
-      }
-
-      /* Coluna da Imagem (Esquerda) */
-      .image-col {
-        width: 35%;
-        height: 100%;
-        /* Padding para criar a margem branca em volta da imagem */
-        padding: 60px 0 60px 60px;
-        display: flex;
-        z-index: 10;
-      }
-
-      /* Cartão da imagem com bordas arredondadas */
-      .image-card {
-        width: 100%;
-        height: 100%;
-        background-image: url("{{backgroundImage}}");
-        background-size: cover;
-        background-position: center;
-        border-radius: 40px; /* Cantos arredondados */
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1); /* Sombra suave para destacar do fundo branco */
-      }
-
-      /* Coluna do Conteúdo (Direita) */
-      .content-col {
-        width: 65%;
-        height: 100%;
-        padding: 120px 80px;
-        display: flex;
         flex-direction: column;
-        justify-content: center;
+        padding: 80px;
         position: relative;
-        z-index: 5;
       }
 
-      /* --- Sombra SVG Sutil (Estilo Slide 1) --- */
+      /* Sombra SVG Sutil */
       .shadow-svg-container {
         position: absolute;
         top: -10%;
         right: -30%;
-        width: 120%;
-        height: 120%;
+        width: 150%;
+        height: 150%;
         z-index: 0;
         pointer-events: none;
         opacity: 0.4;
-        filter: blur(50px);
+        filter: blur(60px);
         transform: rotate(-15deg);
         mix-blend-mode: multiply;
       }
 
-      .center-block {
+      /* Container Principal */
+      .main-container {
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        gap: 50px;
-        width: 100%;
         height: 100%;
         position: relative;
         z-index: 10;
       }
 
-      /* Subtítulo com estilo de "Tag" do Slide 1 */
+      /* 1. Tema / Subtítulo (Topo) */
       .subtitle-wrapper {
         display: flex;
         align-items: center;
-        margin-bottom: 10px;
+        margin-bottom: 40px;
       }
 
       .subtitle {
-        font-family: var(--fonte-texto, "Inter"), sans-serif;
-        font-size: 18px;
+        font-family: var(--fonte-texto);
+        font-size: 24px;
         font-weight: 600;
         text-transform: uppercase;
         letter-spacing: 0.1em;
@@ -111,92 +79,108 @@
         margin: 0;
       }
 
-      /* Título Principal - Mais elegante */
+      /* 2. Imagem Horizontal */
+      .image-container {
+        width: 100%;
+        height: 500px; /* Formato paisagem */
+        margin-bottom: 60px;
+        border-radius: 40px;
+        overflow: hidden;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      }
+
+      .cover-image {
+        width: 100%;
+        height: 100%;
+        background-image: url("{{backgroundImage}}");
+        background-size: cover;
+        background-position: center;
+      }
+
+      /* 3. Título Principal */
+      .title-wrapper {
+        border-left: 6px solid var(--cor-destaque);
+        padding-left: 40px;
+        margin-bottom: auto; /* Empurra o logo para baixo */
+        margin-left: -10px; /* Leve ajuste óptico */
+      }
+
       .main-title {
-        font-family: var(--fonte-titulo, "Inter"), sans-serif;
+        font-family: var(--fonte-titulo);
         font-size: 80px;
         line-height: 1.1;
         font-weight: 600;
         color: var(--cor-titulo);
         word-wrap: break-word;
         margin: 0;
-        width: 100%;
-        letter-spacing: -0.02em;
       }
 
-      /* Detalhe: Barra lateral no título para conectar com Slide 1 */
-      .title-wrapper {
-        border-left: 4px solid var(--cor-destaque);
-        padding-left: 40px;
-        margin-left: -40px;
-      }
-
-      /* Logo no rodapé */
+      /* 4. Logo no Rodapé */
       .logo-footer {
-        height: 50px;
+        height: 60px;
         display: flex;
         align-items: center;
         margin-top: 40px;
-        opacity: 0.8;
-        flex-shrink: 0;
+        opacity: 0.9;
       }
 
       .logo-img {
         max-height: 100%;
-        max-width: 200px;
+        max-width: 250px;
         object-fit: contain;
       }
     </style>
   </head>
   <body>
-    <div class="image-col">
-      <!-- Imagem agora dentro de um container para ter bordas e margem -->
-      <div class="image-card"></div>
+    <!-- Sombra SVG (Fundo) -->
+    <div class="shadow-svg-container">
+      <svg
+        viewBox="0 0 800 800"
+        fill="#cccccc"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M600 0 C 650 100, 550 300, 400 400 C 250 500, 100 450, 0 400 L 0 0 Z"
+          opacity="0.3"
+        />
+        <path
+          d="M800 200 C 700 300, 600 500, 450 600 C 300 700, 200 600, 100 500"
+          opacity="0.2"
+          stroke="#cccccc"
+          stroke-width="80"
+          stroke-linecap="round"
+          fill="none"
+        />
+        <ellipse
+          cx="600"
+          cy="200"
+          rx="20"
+          ry="300"
+          transform="rotate(30 600 200)"
+          opacity="0.2"
+        />
+      </svg>
     </div>
 
-    <div class="content-col">
-      <!-- Sombra SVG (Fundo) -->
-      <div class="shadow-svg-container">
-        <svg
-          viewBox="0 0 800 800"
-          fill="#cccccc"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M600 0 C 650 100, 550 300, 400 400 C 250 500, 100 450, 0 400 L 0 0 Z"
-            opacity="0.3"
-          />
-          <path
-            d="M800 200 C 700 300, 600 500, 450 600 C 300 700, 200 600, 100 500"
-            opacity="0.2"
-            stroke="#cccccc"
-            stroke-width="80"
-            stroke-linecap="round"
-            fill="none"
-          />
-          <ellipse
-            cx="600"
-            cy="200"
-            rx="20"
-            ry="300"
-            transform="rotate(30 600 200)"
-            opacity="0.2"
-          />
-        </svg>
+    <div class="main-container">
+      <!-- 1. Texto 2 (Tema/Subtítulo) -->
+      <div class="subtitle-wrapper">
+        <div class="subtitle">{{texto2}}</div>
       </div>
 
-      <div class="center-block">
-        <div class="subtitle-wrapper">
-          <div class="subtitle">{{texto2}}</div>
-        </div>
+      <!-- 2. Imagem Horizontal -->
+      <div class="image-container">
+        <div class="cover-image"></div>
+      </div>
 
-        <div class="title-wrapper">
-          <h1 class="main-title">{{texto1}}</h1>
-        </div>
+      <!-- 3. Título -->
+      <div class="title-wrapper">
+        <h1 class="main-title">{{texto1}}</h1>
+      </div>
 
-        <div class="logo-footer">
-          <img src="{{logoUrl}}" alt="Logo" class="logo-img" />
-        </div>
+      <!-- 4. Logo -->
+      <div class="logo-footer">
+        <img src="{{logoUrl}}" alt="Logo" class="logo-img" />
       </div>
     </div>
   </body>
