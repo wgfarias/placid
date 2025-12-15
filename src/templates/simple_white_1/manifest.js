@@ -79,7 +79,7 @@ module.exports = {
         { name: "texto1", label: "Título", type: "text", required: true },
         { name: "texto2", label: "Texto Completo", type: "textarea" },
         { name: "texto3", label: "Autor/Crédito", type: "text" },
-        { name: "authorImage", label: "Foto do Autor", type: "image" },
+        { name: "avatar", label: "Foto do Autor (Avatar)", type: "image" },
       ],
     },
     {
@@ -90,7 +90,11 @@ module.exports = {
         { name: "texto1", label: "Categoria/Tag", type: "text" },
         { name: "texto2", label: "Título", type: "text", required: true },
         { name: "texto3", label: "Texto Completo", type: "textarea" },
-        { name: "personImage", label: "Imagem da Pessoa (PNG)", type: "image" },
+        {
+          name: "recortada",
+          label: "Imagem da Pessoa (Recortada)",
+          type: "image",
+        },
       ],
     },
     {

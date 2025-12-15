@@ -381,16 +381,16 @@ VALUES (
       "prompt": "Nome do autor ou fonte. Máximo 30 caracteres."
     },
     {
-      "name": "authorImage",
+      "name": "avatar",
       "type": "image",
-      "label": "Foto do Autor"
+      "label": "Foto do Autor (Avatar)"
     }
   ]'::jsonb,
   '{
     "texto1": "A chave está na consistência",
     "texto2": "Pequenas ações diárias geram resultados extraordinários ao longo do tempo. Não busque perfeição, busque progresso.",
     "texto3": "Maria Silva",
-    "authorImage": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop",
+    "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop",
     "slide_number": "05"
   }'::jsonb,
   1,
@@ -444,17 +444,17 @@ VALUES (
       "prompt": "Desenvolva o conteúdo em 2-4 frases (máximo 250 caracteres). Foco em storytelling ou case prático. Tom engajador."
     },
     {
-      "name": "personImage",
+      "name": "recortada",
       "type": "image",
-      "label": "Imagem da Pessoa (PNG)",
-      "prompt": "Imagem PNG de pessoa com fundo transparente, proporção vertical 2:4."
+      "label": "Imagem da Pessoa (Recortada)",
+      "prompt": "Imagem de pessoa recortada com fundo transparente, proporção 3:4."
     }
   ]'::jsonb,
   '{
     "texto1": "DICA PRO",
     "texto2": "Automatize tarefas repetitivas",
     "texto3": "Use ferramentas como Zapier ou Make para automatizar processos manuais. O tempo investido na configuração se paga em semanas.",
-    "personImage": "https://www.pikpng.com/pngl/b/200-2006565_hombre-png-305777-pessoa-em-p-png-clipart.png",
+    "recortada": "https://www.pikpng.com/pngl/b/200-2006565_hombre-png-305777-pessoa-em-p-png-clipart.png",
     "slide_number": "06"
   }'::jsonb,
   1,

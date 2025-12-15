@@ -59,15 +59,25 @@
         align-items: center;
       }
 
-      /* Coluna de Texto (Esquerda) */
+      /* Coluna de Texto (Esquerda) - Na frente da imagem */
       .text-col {
-        width: 55%;
-        padding-right: 40px;
+        width: 70%;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        height: 100%;
-        padding-bottom: 100px; /* Compensa o padding zero do body */
+        height: auto;
+        position: relative;
+        z-index: 10; /* Na frente da imagem */
+      }
+
+      /* Container de texto com glassmorphism */
+      .text-container {
+        background: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        padding: 50px;
+        border-radius: 30px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
       }
 
       .category-tag {
@@ -105,28 +115,27 @@
         color: var(--cor-destaque);
       }
 
-      /* Coluna da Imagem (Direita) */
+      /* Coluna da Imagem (Direita) - Proporção 3:4, atrás do texto */
       .image-col {
-        width: 45%;
-        height: 100%; /* Ocupa toda altura disponível */
-        position: absolute; /* Posicionamento absoluto para controle total da altura */
-        right: 0;
+        position: absolute;
+        right: -260px;
         bottom: 0;
+        width: 90%; /* Largura da coluna */
+        height: auto;
+        aspect-ratio: 3 / 4; /* Proporção 3:4 */
         display: flex;
-        align-items: flex-end; /* Alinha na base */
+        align-items: flex-end;
         justify-content: center;
-        z-index: 11; /* Fica acima de tudo */
+        z-index: 1; /* Atrás do texto */
+        overflow: hidden;
       }
 
-      /* Imagem "Recortada" */
+      /* Imagem na proporção 3:4 */
       .person-img {
-        height: 95%; /* Ocupa quase toda altura vertical (proporção alongada) */
-        width: auto;
-        max-width: 100%;
-        object-fit: contain;
-        filter: drop-shadow(-20px 10px 30px rgba(0, 0, 0, 0.15));
-        transform-origin: bottom center;
-        align-self: flex-end; /* Garante alinhamento na base */
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center top; /* Foco no topo (rosto) */
       }
 
       /* Número flutuante */
@@ -184,25 +193,22 @@
       <div class="text-col">
         <span class="slide-number">06</span>
 
-        <span class="category-tag">Expert</span>
+        <div class="text-container">
+          <span class="category-tag">Expert</span>
 
-        <h1 class="title">"Não venda o produto. Venda a transformação."</h1>
+          <h1 class="title">"Não venda o produto. Venda a transformação."</h1>
 
-        <p class="description">
-          As pessoas não querem comprar uma furadeira, elas querem o buraco na
-          parede. Foque no <strong>resultado final</strong> e como a vida do seu
-          cliente vai melhorar.
-        </p>
+          <p class="description">
+            As pessoas não querem comprar uma furadeira, elas querem o buraco na
+            parede. Foque no <strong>resultado final</strong> e como a vida do
+            seu cliente vai melhorar.
+          </p>
+        </div>
       </div>
 
       <div class="image-col">
-        <!-- Imagem PNG de pessoa (Exemplo vertical) -->
-        <!-- Na versão final será {{personImage}} -->
-        <img
-          src="https://www.pikpng.com/pngl/b/200-2006565_hombre-png-305777-pessoa-em-p-png-clipart.png"
-          alt="Pessoa"
-          class="person-img"
-        />
+        <!-- Imagem na proporção 3:4 -->
+        <img src="foto3x4.webp" alt="Pessoa" class="person-img" />
       </div>
     </div>
   </body>

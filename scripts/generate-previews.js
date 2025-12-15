@@ -37,9 +37,9 @@ async function generatePreviews() {
       const page = await browser.newPage();
       await page.setViewport(VIEWPORT);
 
-      // Carregar arquivo local
-      const content = await fs.readFile(filePath, "utf-8");
-      await page.setContent(content, { waitUntil: "networkidle0" });
+      // Carregar arquivo local via file:// para suportar imagens locais
+      const fileUrl = `file://${filePath.replace(/\\/g, "/")}`;
+      await page.goto(fileUrl, { waitUntil: "networkidle0" });
 
       // Screenshot
       await page.screenshot({
