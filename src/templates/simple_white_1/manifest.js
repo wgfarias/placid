@@ -112,9 +112,6 @@ module.exports = {
   theme: {
     colors: [
       { name: "cor_primaria", label: "Cor de Destaque", default: "#2563eb" },
-      { name: "cor_titulo", label: "Cor do Título", default: "#1a1a1a" },
-      { name: "cor_texto", label: "Cor do Texto", default: "#4a4a4a" },
-      { name: "background_color", label: "Cor de Fundo", default: "#ffffff" },
     ],
     fonts: [
       {
